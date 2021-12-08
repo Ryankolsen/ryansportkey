@@ -1,13 +1,32 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+
 import reportWebVitals from './reportWebVitals';
 
+import './index.css';
+import Layout from './components/Layout'
+import Home from './components/Home';
+import About from './components/About';
+import ReactPage from './components/ReactPage';
+import App from './App';
+import FooterPage from './components/FooterPage';
+
+import './fonts/AgentOrange.ttf';
+import './fonts/FunZone.ttf';
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Router>
+    <Layout>
+      <Switch>
+        <Home Route path='/' exact/> 
+        <Route path='/about' component={About} />
+        <Route path='/App' component={App} />
+        <Route path='/ReactPage' component={ReactPage} />
+      </Switch>
+    </Layout>
+    <FooterPage />
+  </Router>,
   document.getElementById('root')
 );
 
