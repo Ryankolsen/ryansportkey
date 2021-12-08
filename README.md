@@ -1,4 +1,4 @@
-# Ryans Portfolio App
+# Ryan's Portfolio App
 
 This is the portfolio site that I created using React. I also included a few fun React hooks and plan to add more. This app is deployed on a Linode Ubuntu server running on Linux. I used the pm2 production process manager to maintain and run the actual app. You can see the application here: https://www.ryansportkey.com/
 
