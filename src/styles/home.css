@@ -1,0 +1,79 @@
+/* ***************** Homepage***************** */
+
+.projectBanner {
+  font-family: FunZone;
+  font-size: 0.7in;
+  text-align: left;
+  color: blue;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  padding-top: 15px;
+  margin-left: 1%;
+  /* position: fixed; */
+}
+
+.projectDisplay {
+  display: block;
+}
+
+.projectDisplay {
+  text-align: center;
+  padding-left: 5%;
+}
+
+.projectCard {
+  font-family: AgentOrange;
+  color: white;
+  text-align: center;
+}
+
+.projectCardText {
+  font-family: "Patua One", cursive;
+  color: white;
+  font-size: 30px;
+}
+
+.card-columns .card:hover .card-img {
+  opacity: 1;
+}
+
+.card-columns .card-img {
+  height: 330px;
+  vertical-align: bottom;
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  opacity: 0.8;
+}
+
+.twoButtons {
+  margin-right: 5%;
+  margin-left: 5%;
+}
+
+.carousel-control-prev-icon {
+  background-color: gray;
+}
+
+.carousel-control-next-icon {
+  background-color: gray;
+}
+
+.carousel-control-prev {
+  transition: transform 0s ease-in-out;
+}
+
+.carousel-control-next {
+  transition: transform 0s ease-in-out;
+}
+.carousel-item-next {
+  transition: transform 0s ease-in-out;
+}
+.carousel-item-prev {
+  transition: transform 0s ease-in-out;
+}
+.carousel-item-left {
+  transform: translateX(-100%);
+}
+.carousel-item-right {
+  transform: translateX(100%);
+}

@@ -1,0 +1,119 @@
+/* *************** React Page ********************** */
+
+.reactCenteredContainer {
+  display: flex;
+  justify-content: center;
+  align-items: top;
+  text-align: center;
+  float: center;
+}
+
+.reactRow {
+  display: flex;
+}
+
+.counterColumn {
+  background-color: blanchedalmond;
+  margin: 15px;
+  min-width: 30px;
+  max-width: 350px;
+  flex: auto;
+}
+
+.HeroColumn {
+  background-color: rgb(151, 200, 233);
+  margin: 15px;
+  min-width: 30px;
+  max-width: 350px;
+  flex: auto;
+}
+
+.counterRow {
+  padding: 2%;
+  margin-top: 10%;
+  text-align: center;
+  border-width: 2px;
+  border-color: black;
+
+  font-family: "Gloria Hallelujah", cursive;
+  font-family: "Irish Grover", cursive;
+  font-family: "Marvel", sans-serif;
+  font-family: "Permanent Marker", cursive;
+  font-size: 25px;
+}
+
+.counterButton {
+  text-align: center;
+  margin-bottom: 5%;
+}
+
+img {
+  max-width: 20em;
+  display: block;
+  margin: auto;
+}
+
+.imageZoomDiv {
+  margin-top: 2%;
+}
+
+.buttonCode {
+  max-height: 100px;
+  max-width: 300px;
+}
+
+.textHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Irish Grover", cursive;
+  font-family: "Marvel", sans-serif;
+  font-family: "Permanent Marker", cursive;
+  margin-top: 5%;
+}
+
+.textBox {
+  justify-content: center;
+  margin: 10px;
+  margin-top: 5%;
+}
+
+.reactBanner {
+  font-family: FunZone;
+  font-size: 0.7in;
+  text-align: left;
+  color: blue;
+  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+  padding-top: 15px;
+  margin-left: 1%;
+}
+
+.heroesMainTitle {
+  font-family: "Permanent Marker", cursive;
+  color: darkblue;
+  font-size: 35px;
+}
+
+.centerdButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.heroStrengthDisplay {
+  color: lightsteelblue;
+  background-color: blue;
+  font-size: 20px;
+}
+
+.heroNameDisplay {
+  font-size: 33px;
+  font-weight: bold;
+  font-family: "Marvel", sans-serif;
+}
+
+.heroesImageTitle {
+  font-family: "Permanent Marker", cursive;
+  color: darkblue;
+  font-size: 32px;
+}

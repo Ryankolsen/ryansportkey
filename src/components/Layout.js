@@ -1,64 +1,60 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {NavDropdown, Navbar, Nav, } from 'react-bootstrap';
+import React from "react";
+import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { NavDropdown, Navbar, Nav } from "react-bootstrap";
 
+import "../styles/App.css";
 
-import '../styles/App.css';
+export const Layout = (props) => {
+  return (
+    <div>
+      <header className="myHeader">
+        <div className="myRow">
+          <h2 className="myTitle"> Ryan's Portfolio</h2>
+        </div>
 
-export class Layout extends Component {
+        <Navbar className="myNavBar" bg="dark" expand="lg" variant="dark">
+          <Navbar.Brand className="myNavLink" as={Link} to="/">
+            Home
+          </Navbar.Brand>
 
-    render() {
-        return (
-            <div>
-                <header className='myHeader'>
-                    
-                    <div className='myRow'>                                            
-                        <h2 className="myTitle"> Ryan's Portfolio</h2>
-                    </div>
+          <Navbar.Toggle aria-controls="navbarScroll" />
+          <Navbar.Collapse id="navbarScroll">
+            <Nav
+              className="mr-auto my-2 my-lg-0"
+              style={{ maxHeight: "100px" }}
+              navbarScroll
+            >
+              <Nav.Link as={Link} to="/ReactPage" className="mr-4">
+                React{" "}
+              </Nav.Link>
+              <NavDropdown title="Links" id="navbarScrollingDropdown">
+                <NavDropdown.Item href="https://github.com/Ryankolsen">
+                  GitHub
+                </NavDropdown.Item>
+                <NavDropdown.Item href="https://www.linkedin.com/in/ryan-olsen-a5463a18/">
+                  LinkedIn
+                </NavDropdown.Item>
+                <NavDropdown.Item href="https://www.facebook.com/ryan.olsen.524">
+                  Facebook
+                </NavDropdown.Item>
 
-                    <Navbar className="myNavBar" bg="dark" expand="lg" variant="dark">
-                        <Navbar.Brand className="myNavLink" as={Link} to="/">Home</Navbar.Brand>                        
-                        
-                            <Navbar.Toggle aria-controls="navbarScroll" />
-                            <Navbar.Collapse id="navbarScroll">
-                                <Nav
-                                    className="mr-auto my-2 my-lg-0"
-                                    style={{ maxHeight: '100px' }}
-                                    navbarScroll
-                                    >
-                                    <Nav.Link as={Link} to='/ReactPage' className="mr-4" >React </Nav.Link>     
-                                    <NavDropdown title="Links" id="navbarScrollingDropdown">
-                                    <NavDropdown.Item href="https://github.com/Ryankolsen">GitHub</NavDropdown.Item>
-                                    <NavDropdown.Item href="https://www.linkedin.com/in/ryan-olsen-a5463a18/">LinkedIn</NavDropdown.Item>
-                                    <NavDropdown.Item href="https://www.facebook.com/ryan.olsen.524">Facebook</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="https://www.ryanswebsite0909.com/">
+                  Blog Website Example
+                </NavDropdown.Item>
+              </NavDropdown>
+              <Nav.Link as={Link} to="/About" className="mr-4">
+                About{" "}
+              </Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
+      </header>
 
-                                    <NavDropdown.Divider />
-                                    <NavDropdown.Item href="https://www.ryanswebsite0909.com/">Blog Website Example</NavDropdown.Item>
-                                    </NavDropdown>
-                                    <Nav.Link as={Link} to='/About' className="mr-4" >About </Nav.Link>
-                                    
-                                </Nav>
-                                {/* <Form className="d-flex">
-                                    <FormControl
-                                        type="search"
-                                        placeholder="Search"
-                                        className="mr-2"
-                                        aria-label="Search"
-                                    />
-                                <Button variant="outline-success">Search</Button>
-                                </Form> */}
-                            </Navbar.Collapse>                            
-                        </Navbar>                            
-                </header>
-                
-                <div className='myBody'>
-                    {this.props.children}
-                </div>
-           
-            </div>
-        )
-    }
-}
+      <div className="myBody">{props.children}</div>
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;

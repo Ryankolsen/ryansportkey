@@ -8,7 +8,7 @@ import data from "../media/proj3-datacomp.png";
 import datapdf from "../media/Proj3-datapdf.pdf";
 import unity from "../media/proj4-unity.png";
 
-function Home() {
+function NewHome() {
   const projImg1 = flaskBlogImg;
   const projImg2 = sqldbvs;
   const projImg3 = data;
@@ -189,4 +189,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default NewHome;
