@@ -9,8 +9,8 @@ import Layout from "./components/Layout";
 import Home from "./components/Home";
 import About from "./components/About";
 import ReactPage from "./components/ReactPage";
-import App from "./App";
 import FooterPage from "./components/FooterPage";
+import NewHome from "./components/NewHome";
 
 import "./fonts/AgentOrange.ttf";
 import "./fonts/FunZone.ttf";
@@ -19,9 +19,8 @@ ReactDOM.render(
   <Router>
     <Layout>
       <Switch>
-        <Home Route path="/" exact />
+        <NewHome Route path="/" exact />
         <Route path="/about" component={About} />
-        <Route path="/App" component={App} />
         <Route path="/ReactPage" component={ReactPage} />
       </Switch>
     </Layout>

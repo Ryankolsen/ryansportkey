@@ -1,22 +1,20 @@
 @import-normalize;
 @import "header.css";
-@import "home.css";
+@import "new-home.css";
 @import "react-page.css";
 @import "about.css";
+@import "layout.css";
 
 /* General */
-.alignLeft {
-  text-align: left;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-/* ****** Background ************* */
-
-.myBody {
-  height: 100%;
-  background-image: url("../media/backgroundDBZ.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.alignLeft {
+  text-align: left;
 }
 
 .footer {

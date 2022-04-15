@@ -52,7 +52,9 @@ export const Layout = (props) => {
         </Navbar>
       </header>
 
-      <div className="myBody">{props.children}</div>
+      <div className="layout__background">
+        <div className="layout__body">{props.children}</div>
+      </div>
     </div>
   );
 };
