@@ -1,4 +1,4 @@
-import googleApiImage from "../media/googleApiImage.jpg";
+import googleApiImage from "../media/googleApiImage2.jpg";
 import flaskBlogImg from "../media/proj1-flaskblog.jpg";
 import sqldbvs from "../media/proj2-SQL-DB-VS.jpg";
 import data from "../media/proj3-image.png";
