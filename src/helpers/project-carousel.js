@@ -1,12 +1,24 @@
+import googleApiImage from "../media/googleApiImage.jpg";
 import flaskBlogImg from "../media/proj1-flaskblog.jpg";
 import sqldbvs from "../media/proj2-SQL-DB-VS.jpg";
 import data from "../media/proj3-image.png";
-// import datapdf from "../media/Proj3-datapdf.pdf";
 import unity from "../media/proj4-unity.png";
 
 export const projectCarouselObjects = [
   {
     key: 1,
+    image: googleApiImage,
+    projectTitle: "React Google Book API",
+    projectDescriptions: `This App uses React Redux Toolkit, 
+    Typescript, and RTK Query to access the Google Books API, allows a user to search for books by any author, 
+    and has the option to add books to a favorite list that can be viewed. Please note this is a work in progress.`,
+    links: {
+      firstLink: "https://main--astonishing-rolypoly-ad8c2b.netlify.app/",
+      secondLink: "https://github.com/Ryankolsen/googleBookApi",
+    },
+  },
+  {
+    key: 2,
     image: flaskBlogImg,
     projectTitle: "Flask Blog Website",
     projectDescriptions: `This full-featured Django application was built from scratch
@@ -18,7 +30,7 @@ export const projectCarouselObjects = [
     },
   },
   {
-    key: 2,
+    key: 3,
     image: sqldbvs,
     projectTitle: "SQL Server API",
     projectDescriptions: `Windows Forms Application using C# and SQL Server. Created on
@@ -31,7 +43,7 @@ export const projectCarouselObjects = [
     },
   },
   {
-    key: 3,
+    key: 4,
     image: data,
     projectTitle: " Jupyter Notebook DataFrame",
     projectDescriptions:
@@ -43,7 +55,7 @@ export const projectCarouselObjects = [
     },
   },
   {
-    key: 4,
+    key: 5,
     image: unity,
     projectTitle: "2D Unity Game ",
     projectDescriptions: `2D dungeon game created on Unity using C# Scripts on Visual

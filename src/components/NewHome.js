@@ -41,7 +41,7 @@ function NewHome() {
             <div
               className="new-home__carousel-inner-right"
               onClick={() => {
-                currImg < 3 && setCurrImg(currImg + 1);
+                currImg < 4 && setCurrImg(currImg + 1);
               }}
             >
               <div className="new-home__carousel-inner__h1">
@@ -72,6 +72,11 @@ function NewHome() {
         </div>
       </div>
       <div className="new-home__links">
+        <div className="new-home__button">
+          <Button href="https://main--astonishing-rolypoly-ad8c2b.netlify.app/">
+            React API
+          </Button>
+        </div>
         <div className="new-home__button">
           <Button as={Link} to="/ReactPage">
             React Code/Apps

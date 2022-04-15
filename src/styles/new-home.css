@@ -31,7 +31,6 @@
 .new-home__carousel-inner {
   height: 100%;
   width: 100%;
-
   object-fit: cover;
   background-position: center;
   position: relative;
@@ -58,24 +57,11 @@
   align-items: center;
 }
 
-.new-home__carousel.center {
-  flex: 80%;
-  /* height: 100%; */
-
-  display: grid;
-  place-items: center;
-  font-family: Arial, Helvetica, sans-serif;
-  text-align: justify;
-  text-align-last: center;
-}
-
 .new-home__carousel-inner-right {
   float: right;
   display: flex;
   height: 400px;
   background-color: rgba(91, 100, 104, 0.6);
-  /* display: grid;
-  place-items: center; */
   color: white;
   cursor: pointer;
 }
@@ -95,10 +81,12 @@
 .new-home__links {
   margin-top: 5%;
   width: 100%;
-  align-items: center;
-  align-content: center;
+  position: flex;
+
   text-align: center;
   align-self: center;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
 }
 
 .new-home__button {
