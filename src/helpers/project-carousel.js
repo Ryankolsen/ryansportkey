@@ -14,7 +14,9 @@ export const projectCarouselObjects = [
     and has the option to add books to a favorite list that can be viewed. Please note this is a work in progress.`,
     links: {
       firstLink: "https://main--astonishing-rolypoly-ad8c2b.netlify.app/",
+      firstLinkButtonText: "Website",
       secondLink: "https://github.com/Ryankolsen/googleBookApi",
+      secondLinkButtonText: "Code on GitHub",
     },
   },
   {
@@ -26,7 +28,9 @@ export const projectCarouselObjects = [
     with WSGI, and a good portion of Bootstrap CSS/HTML.`,
     links: {
       firstLink: "https://www.ryanswebsite0909.com/",
+      firstLinkButtonText: "Website",
       secondLink: "https://github.com/Ryankolsen/DjangoWebsite",
+      secondLinkButtonText: "Code on GitHub",
     },
   },
   {
@@ -39,7 +43,9 @@ export const projectCarouselObjects = [
     links: {
       firstLink:
         "https://github.com/Ryankolsen/SQL_DB_VS_/blob/main/DB_VS_EX.mp4",
+      firstLinkButtonText: "Website",
       secondLink: "https://github.com/Ryankolsen/SQL_DB_VS_",
+      secondLinkButtonText: "Code on GitHub",
     },
   },
   {
@@ -51,6 +57,8 @@ export const projectCarouselObjects = [
     links: {
       firstLink:
         "https://github.com/Ryankolsen/Jupyter_Notebook_Stack_Survey_2020",
+      firstLinkButtonText: "Code on GitHub",
+
       secondLink: "",
     },
   },
@@ -59,14 +67,16 @@ export const projectCarouselObjects = [
     image: unity,
     projectTitle: "2D Unity Game ",
     projectDescriptions: `2D dungeon game created on Unity using C# Scripts on Visual
-    Studio<br></br> <br></br>
+    Studio. 
     To play: Download the link, extract and run the
     DungeonFighter.exe file. This file must be in the same folders
     as everything else you unzipped`,
     links: {
       firstLink:
         "https://github.com/Ryankolsen/UnityDungeonFighter/blob/main/DungeonFighter_Data.zip",
+      firstLinkButtonText: "Download Game",
       secondLink: "https://github.com/Ryankolsen/UnityDungeonFighter",
+      secondLinkButtonText: "Code on GitHub",
     },
   },
 ];

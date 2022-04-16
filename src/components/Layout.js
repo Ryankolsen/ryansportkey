@@ -40,6 +40,9 @@ export const Layout = (props) => {
                 </NavDropdown.Item>
 
                 <NavDropdown.Divider />
+                <NavDropdown.Item href="https://main--astonishing-rolypoly-ad8c2b.netlify.app/">
+                  Google Book API
+                </NavDropdown.Item>
                 <NavDropdown.Item href="https://www.ryanswebsite0909.com/">
                   Blog Website Example
                 </NavDropdown.Item>

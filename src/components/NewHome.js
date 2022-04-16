@@ -57,8 +57,8 @@ function NewHome() {
             <Button
               href={projectCarouselObjects[currImg].links.firstLink.toString()}
             >
-              Link One
-            </Button>{" "}
+              {projectCarouselObjects[currImg].links.firstLinkButtonText}
+            </Button>
           </div>
           {projectCarouselObjects[currImg].links.secondLink ? (
             <div className="new-home__carousel-links-buttons ">
@@ -67,7 +67,7 @@ function NewHome() {
                   currImg
                 ].links.secondLink.toString()}
               >
-                Link Two
+                {projectCarouselObjects[currImg].links.secondLinkButtonText}
               </Button>
             </div>
           ) : null}
