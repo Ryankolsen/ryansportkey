@@ -19,7 +19,9 @@ function NewHome() {
           <h1 className="new-home__carousel-header__h1">
             {projectCarouselObjects[currImg].projectTitle}
           </h1>
-          <p>{projectCarouselObjects[currImg].projectDescriptions}</p>
+          <p className="new-home__carousel-header__p">
+            {projectCarouselObjects[currImg].projectDescriptions}
+          </p>
         </div>
         <div className="new-home__carousel">
           <div
