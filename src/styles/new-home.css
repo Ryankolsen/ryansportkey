@@ -14,6 +14,12 @@
   align-self: center;
   border-radius: 25px;
 }
+
+@media screen and (max-width: 750px) {
+  .new-home__carousel-container {
+    width: 100%;
+  }
+}
 .new-home__carousel-header {
   padding-top: 5px;
 }
@@ -53,32 +59,41 @@
   float: left;
   /* z-index: 2; */
   height: 400px;
-  width: 5%;
-  background-color: rgba(91, 100, 104, 0.6);
+  width: 8%;
+  background-color: rgba(91, 100, 104, 0.4);
   color: white;
   cursor: pointer;
 }
 .new-home__carousel-inner-left:hover {
   background-color: rgb(130, 136, 141);
+  color: white;
 }
 
-.new-home__carousel-inner__h1 {
+.new-home__carousel-inner__h1__div {
   height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
+  font-size: 25px;
+  margin: auto;
 }
 
 .new-home__carousel-inner-right {
   float: right;
   display: flex;
   height: 400px;
-  width: 5%;
+  width: 8%;
   background-color: rgba(91, 100, 104, 0.6);
   color: white;
   cursor: pointer;
 }
 .new-home__carousel-inner-right:hover {
   background-color: rgb(130, 136, 141);
+}
+.new-home__carousel-inner__h1 {
+  width: 100%;
+  text-align: center;
+  margin: auto;
 }
 
 .new-home__carousel-links {
@@ -94,7 +109,6 @@
   margin-top: 5%;
   width: 100%;
   position: flex;
-
   text-align: center;
   align-self: center;
   display: grid;

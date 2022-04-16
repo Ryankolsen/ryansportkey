@@ -36,8 +36,8 @@ function NewHome() {
                 currImg > 0 && setCurrImg(currImg - 1);
               }}
             >
-              <div className="new-home__carousel-inner__h1">
-                <h1 className="">&#8656;</h1>
+              <div className="new-home__carousel-inner__h1__div">
+                <h1 className="new-home__carousel-inner__h1">&#8656;</h1>
               </div>
             </div>
             <div
@@ -46,8 +46,8 @@ function NewHome() {
                 currImg < 4 && setCurrImg(currImg + 1);
               }}
             >
-              <div className="new-home__carousel-inner__h1">
-                <h1>&#8658;</h1>
+              <div className="new-home__carousel-inner__h1__div">
+                <h1 className="new-home__carousel-inner__h1">&#8658;</h1>
               </div>
             </div>
           </div>
