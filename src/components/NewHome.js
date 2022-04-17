@@ -9,7 +9,7 @@ function NewHome() {
   const [currImg, setCurrImg] = useState(0);
 
   console.log(projectCarouselObjects);
-  const numProjects = projectCarouselObjects.length;
+  const numProjects = projectCarouselObjects.length - 1;
   console.log(numProjects);
 
   return (
@@ -33,7 +33,12 @@ function NewHome() {
             <div
               className="new-home__carousel-inner-left"
               onClick={() => {
-                currImg > 0 && setCurrImg(currImg - 1);
+                if (currImg === 0) {
+                  setCurrImg(numProjects);
+                }
+                if (currImg > 0) {
+                  setCurrImg(currImg - 1);
+                }
               }}
             >
               <div className="new-home__carousel-inner__h1__div">
@@ -43,7 +48,12 @@ function NewHome() {
             <div
               className="new-home__carousel-inner-right"
               onClick={() => {
-                currImg < 4 && setCurrImg(currImg + 1);
+                if (currImg === 4) {
+                  setCurrImg(1);
+                }
+                if (currImg < 4) {
+                  setCurrImg(currImg + 1);
+                }
               }}
             >
               <div className="new-home__carousel-inner__h1__div">

@@ -15,11 +15,6 @@
   border-radius: 25px;
 }
 
-@media screen and (max-width: 900px) {
-  .new-home__carousel-container {
-    width: 95%;
-  }
-}
 .new-home__carousel-header {
   padding-top: 5px;
 }
@@ -117,4 +112,10 @@
 
 .new-home__button {
   margin: 5px;
+}
+
+@media screen and (max-width: 900px) {
+  .new-home__carousel-container {
+    width: 95%;
+  }
 }
