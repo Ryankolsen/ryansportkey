@@ -6,7 +6,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-top: 5%;
-  width: 65%;
+  width: 75%;
   background-color: rgb(235, 238, 241);
   align-items: center;
   align-content: center;
@@ -15,9 +15,9 @@
   border-radius: 25px;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 900px) {
   .new-home__carousel-container {
-    width: 100%;
+    width: 95%;
   }
 }
 .new-home__carousel-header {
@@ -51,9 +51,9 @@
   object-fit: cover;
   background-position: center;
   position: relative;
-
   background-repeat: no-repeat;
   background-size: 100%;
+  border: 1px solid black;
 }
 .new-home__carousel-inner-left {
   float: left;
