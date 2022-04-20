@@ -43,7 +43,7 @@ export const projectCarouselObjects = [
     links: {
       firstLink:
         "https://github.com/Ryankolsen/SQL_DB_VS_/blob/main/DB_VS_EX.mp4",
-      firstLinkButtonText: "Website",
+      firstLinkButtonText: "Video",
       secondLink: "https://github.com/Ryankolsen/SQL_DB_VS_",
       secondLinkButtonText: "Code on GitHub",
     },
