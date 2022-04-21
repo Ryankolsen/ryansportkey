@@ -1,21 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "../styles/App.css";
 
-import { CSSTransition } from "react-transition-group";
-
 //npm install react-transition-group --save
 
-import { projectCarouselObjects } from "../helpers/project-carousel";
+// import { projectCarouselObjects } from "../helpers/project-carousel";
 
-function Carousel() {
+function Carousel({ projectCarouselObjects, numberSlides }) {
   const [currImg, setCurrImg] = useState(1);
 
   const numProjects = projectCarouselObjects.length;
-
-  useEffect(() => {
-    console.log();
-  }, [currImg]);
+  console.log(projectCarouselObjects);
 
   return (
     <div>
@@ -63,10 +58,10 @@ function Carousel() {
                     <div
                       className="carousel__carousel-inner-right"
                       onClick={() => {
-                        if (currImg === 5) {
+                        if (currImg === numberSlides) {
                           setCurrImg(1);
                         }
-                        if (currImg < 5) {
+                        if (currImg < numberSlides) {
                           setCurrImg(currImg + 1);
                         }
                       }}

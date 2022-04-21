@@ -1,0 +1,9 @@
+.react-page__projects-container {
+  background-color: rgb(255, 255, 255);
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  align-self: center;
+  text-align: center;
+  border-radius: 8px;
+}

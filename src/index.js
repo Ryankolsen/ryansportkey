@@ -6,7 +6,6 @@ import reportWebVitals from "./reportWebVitals";
 
 import "./index.css";
 import Layout from "./components/Layout";
-import Home from "./components/Home";
 import About from "./components/About";
 import ReactPage from "./components/ReactPage";
 import FooterPage from "./components/FooterPage";

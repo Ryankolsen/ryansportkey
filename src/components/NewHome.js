@@ -3,11 +3,15 @@ import { Button } from "react-bootstrap";
 import "../styles/App.css";
 import { Link } from "react-router-dom";
 import Carousel from "./Carousel";
+import { projectCarouselObjects } from "../helpers/project-carousel";
 
 function NewHome() {
   return (
     <div>
-      <Carousel />
+      <Carousel
+        projectCarouselObjects={projectCarouselObjects}
+        numberSlides={5}
+      />
       <div className="new-home__links">
         <div className="new-home__button">
           <Button href="https://main--astonishing-rolypoly-ad8c2b.netlify.app/">

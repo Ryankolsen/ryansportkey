@@ -60,6 +60,7 @@ export const projectCarouselObjects = [
       firstLinkButtonText: "Code on GitHub",
 
       secondLink: "",
+      secondLinkButtonText: "",
     },
   },
   {
