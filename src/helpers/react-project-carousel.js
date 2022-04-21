@@ -1,5 +1,5 @@
 import googleApiImage from "../media/googleApiImage2.jpg";
-import connMod from "../media/ConnModCodeImg.png";
+import connMod from "../media/ConnModCodeImgBoth.png";
 import pokemonImg from "../media/pokemon.jpg";
 
 export const projectCarouselObjects = [
