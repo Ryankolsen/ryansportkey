@@ -7,7 +7,7 @@
   margin-right: auto;
   margin-top: 5%;
   width: 75%;
-  background-color: rgb(198, 225, 252);
+  background-color: rgb(205, 230, 255);
   align-items: center;
   align-content: center;
   text-align: center;
@@ -66,7 +66,8 @@
 }
 .carousel__carousel-inner-left:hover {
   background-color: rgb(130, 136, 141);
-  color: white;
+  transition: background-color 0.5s, color 0.5s;
+  color: rgb(253, 253, 253);
 }
 
 .carousel__carousel-inner__h1__div {
@@ -84,16 +85,24 @@
   min-height: 398px;
   width: 8%;
   background-color: rgba(91, 100, 104, 0.6);
-  color: white;
+  color: rgb(253, 253, 253);
   cursor: pointer;
 }
 .carousel__carousel-inner-right:hover {
   background-color: rgb(130, 136, 141);
+  transition: background-color 0.5s, color 0.5s;
 }
 .carousel__carousel-inner__h1 {
   width: 100%;
   text-align: center;
   margin: auto;
+}
+.carousel__carousel-inner__h1:hover {
+  color: rgb(96, 255, 5);
+  transition: border-color 0.8s, color 0.8s;
+  transform: scale(1.25);
+
+  /* transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1); */
 }
 
 .carousel__carousel-links {
@@ -115,8 +124,13 @@
   grid-template-columns: repeat(3, auto);
 }
 
-.carousel__button {
+.carousel__carousel-links-buttons-button {
   margin: 5px;
+}
+.carousel__carousel-links-buttons-button:hover {
+  border-width: 4px;
+  border-color: rgb(96, 255, 5);
+  transition: border-color 0.6s, color 0.6s;
 }
 
 @media screen and (max-width: 1000px) {

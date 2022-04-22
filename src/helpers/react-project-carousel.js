@@ -5,6 +5,21 @@ import pokemonImg from "../media/pokemon.jpg";
 export const projectCarouselObjects = [
   {
     key: 1,
+    image: connMod,
+    projectTitle: "React Native Application",
+    projectDescriptions:
+      "This React Native application is up on Google Play for Android. It is industry specific, I made it for my current job/role, and allows a user to search an extensive modification code list by a couple of different metrics.",
+
+    links: {
+      firstLink: "https://github.com/Ryankolsen/ConnectorModCodes",
+      firstLinkButtonText: "Code on GitHub",
+      secondLink:
+        "https://play.google.com/store/apps/details?id=com.ryankolsen.ConnectorModCodes",
+      secondLinkButtonText: "Play Store Link",
+    },
+  },
+  {
+    key: 2,
     image: googleApiImage,
     projectTitle: "React Google Book API",
     projectDescriptions: `This App uses React Redux Toolkit, 
@@ -18,7 +33,7 @@ export const projectCarouselObjects = [
     },
   },
   {
-    key: 2,
+    key: 3,
     image: pokemonImg,
     projectTitle: "React Pokemon API",
     projectDescriptions:
@@ -29,21 +44,6 @@ export const projectCarouselObjects = [
       firstLinkButtonText: "Code on GitHub",
       secondLink: "",
       secondLinkButtonText: "",
-    },
-  },
-  {
-    key: 3,
-    image: connMod,
-    projectTitle: "React Native Application",
-    projectDescriptions:
-      "This React Native application is up on Google Play for Android. It is industry specific, I made it for my current job/role, and allows a user to search an extensive modification code list by a couple of different metrics.",
-
-    links: {
-      firstLink: "https://github.com/Ryankolsen/ConnectorModCodes",
-      firstLinkButtonText: "Code on GitHub",
-      secondLink:
-        "https://play.google.com/store/apps/details?id=com.ryankolsen.ConnectorModCodes",
-      secondLinkButtonText: "Play Store Link",
     },
   },
 ];

@@ -82,6 +82,7 @@ function Carousel({ projectCarouselObjects, numberSlides }) {
         <div className="carousel__carousel-links">
           <div className="carousel__carousel-links-buttons ">
             <Button
+              className="carousel__carousel-links-buttons-button"
               href={projectCarouselObjects[
                 currImg - 1
               ].links.firstLink.toString()}
@@ -92,6 +93,7 @@ function Carousel({ projectCarouselObjects, numberSlides }) {
           {projectCarouselObjects[currImg - 1].links.secondLink ? (
             <div className="carousel__carousel-links-buttons ">
               <Button
+                className="carousel__carousel-links-buttons-button"
                 href={projectCarouselObjects[
                   currImg - 1
                 ].links.secondLink.toString()}
