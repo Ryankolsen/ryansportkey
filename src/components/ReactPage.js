@@ -10,13 +10,17 @@ import { projectCarouselObjects } from "../helpers/react-project-carousel";
 const ReactPage = () => {
   return (
     <div>
-      <h3 className="reactBanner">React Projects</h3>
+      <div className="react_page__header-container">
+        <h3 className="react_page__reactBanner">React Projects</h3>
+      </div>
+
       <Carousel
         projectCarouselObjects={projectCarouselObjects}
         numberSlides={3}
       />
-
-      <h3 className="reactBanner">React Hooks</h3>
+      <div className="react_page__header-container hooks">
+        <h3 className="react_page__reactBanner">React Hooks</h3>
+      </div>
       <Container
         className=""
         style={{ justifyContent: "center", alignItems: "center" }}

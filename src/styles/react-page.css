@@ -1,4 +1,25 @@
 /* *************** React Page ********************** */
+.react_page__header-container {
+  background-color: rgb(181, 220, 255);
+  width: 45%;
+  border-radius: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  opacity: 0.8;
+  margin-top: 25px;
+}
+
+.react_page__reactBanner {
+  font-family: FunZone;
+  font-size: 0.7in;
+  color: blue;
+  opacity: 1;
+  /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
+}
+.react_page__header-container.hooks {
+  margin-top: 35px;
+}
 
 .reactCenteredContainer {
   display: flex;
@@ -76,16 +97,6 @@ img {
   justify-content: center;
   margin: 10px;
   margin-top: 5%;
-}
-
-.reactBanner {
-  font-family: FunZone;
-  font-size: 0.7in;
-  text-align: left;
-  color: blue;
-  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-  padding-top: 15px;
-  margin-left: 1%;
 }
 
 .heroesMainTitle {

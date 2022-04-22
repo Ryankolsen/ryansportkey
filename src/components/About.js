@@ -87,10 +87,16 @@ function About() {
               <Accordion.Collapse eventKey="0">
                 <Card.Body className="accordianBody">
                   <Card.Text>
-                    This website was designed using react framework with some
-                    JSX, Bootstrap and CSS. I plan to continue to add more
-                    features and react hooks in the near future. Stay Tuned!
+                    This website was designed using react and is hosted on
+                    Netlify using continuous deployment with Github. Thanks for
+                    visiting and here is a link to the code:
                   </Card.Text>
+                  <Button
+                    className="mb-3"
+                    href="https://github.com/Ryankolsen/ryansportkey"
+                  >
+                    Code
+                  </Button>
                   <Card.Text>
                     Please see below for my Degrees and Certifications
                   </Card.Text>
@@ -114,7 +120,7 @@ function About() {
                   </Card.Text>
                   <Card.Text>
                     I genuinely love breaking larger applications down into
-                    small, manageable parts and working to find the most
+                    small, manageable components and working to find the most
                     efficient and effective solution.
                   </Card.Text>
                 </Card.Body>
@@ -134,11 +140,10 @@ function About() {
                   Bachelor’s of Business Admin Cum Laude
                 </Card.Title>
                 <Card.Text className="cardText">
-                  {" "}
-                  Major: Management Information Systems, Completed 2013{" "}
+                  Major: Management Information Systems, Completed 2013
                 </Card.Text>
                 <Card.Title className="degreeTitle mt-3">
-                  Courses Included:{" "}
+                  Courses Included:
                 </Card.Title>
                 <Card.Text className="cardText">
                   Java SE, Database, Social Media, Web Design, Data
