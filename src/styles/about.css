@@ -32,14 +32,22 @@
   text-align: center;
   display: center;
   width: 750px;
-}
-
-.about__accordion-header {
-  max-width: 750px;
   font-family: "Cinzel Decorative", cursive;
   font-family: "Miss Fajardose", cursive;
   font-family: "Rye", cursive;
   font-size: 20px;
+}
+
+.about__accordion-body {
+  max-width: 750px;
+  background-color: var(--blue-bg-color);
+  color: rgb(242, 251, 255);
+  justify-content: center;
+  text-align: center;
+}
+.about__accordion-header {
+  max-width: 750px;
+
   background-color: var(--blue-bg-color);
   color: rgb(242, 251, 255);
   justify-content: center;

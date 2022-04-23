@@ -30,7 +30,7 @@ function About() {
       <Container className="">
         <Container className="about__accordion-container">
           <Accordion className="about__accordion-about">
-            <Card className="about__accordion-header ">
+            <Card className="about__accordion-body ">
               <Accordion.Toggle
                 as={Card.Header}
                 className="about__accordion-header"
@@ -57,7 +57,7 @@ function About() {
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card className="about__accordion-header ">
+            <Card className="about__accordion-body ">
               <Accordion.Toggle
                 as={Card.Header}
                 eventKey="1"
