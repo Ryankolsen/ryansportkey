@@ -57,7 +57,7 @@ function About() {
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card className="about__accordion-body ">
+            <Card className="about__accordion-body">
               <Accordion.Toggle
                 as={Card.Header}
                 eventKey="1"
