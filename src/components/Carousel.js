@@ -2,10 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 import "../styles/App.css";
 
-//npm install react-transition-group --save
-
-// import { projectCarouselObjects } from "../helpers/project-carousel";
-
 function Carousel({ projectCarouselObjects, numberSlides }) {
   const [currImg, setCurrImg] = useState(1);
 

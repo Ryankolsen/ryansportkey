@@ -1,5 +1,5 @@
 /******************************** About Page ******************************************/
-.accordianContainer {
+.accordionContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,14 +7,14 @@
   float: center;
 }
 
-.accordianAbout {
+.accordionAbout {
   justify-content: center;
   text-align: center;
   display: center;
   width: 750px;
 }
 
-.accordianHeader {
+.accordionHeader {
   max-width: 750px;
   font-family: "Cinzel Decorative", cursive;
   font-family: "Miss Fajardose", cursive;
@@ -25,9 +25,14 @@
   justify-content: center;
   text-align: center;
 }
-.accordianBody {
+.about__accordion-header:hover {
+  cursor: pointer;
+  background-color: rgb(32, 146, 240);
+  transition: background-color 1s, color 1s;
+}
+.accordionBody {
   background-color: aliceblue;
-  color: blue;
+  color: rgb(25, 25, 44);
 }
 
 .aboutBanner {

@@ -13,8 +13,6 @@ import imageSmThree from "../media/HeroCodeThreeSm.jpg";
 import imageLgThree from "../media/HeroCodeThree.jpg";
 import imageSmFour from "../media/HeroCodeFourSm.jpg";
 import imageLgFour from "../media/HeroCodeFour.jpg";
-import avengersImg from "../media/avengers.jpg";
-import dbzImg from "../media/dbz.jpg";
 
 export default function Heroes() {
   const [heroes, setHeroes] = useState([]);
@@ -42,7 +40,7 @@ export default function Heroes() {
             </h3>
             <div className="d-grid gap-2">
               <Button
-                className="centerdButton mb-3"
+                className="centeredButton mb-3"
                 variant="warning"
                 onClick={handleClearHeroes}
               >

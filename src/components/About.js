@@ -10,63 +10,14 @@ import {
 } from "react-bootstrap";
 
 import DisplayList from "./DisplayList";
-
+import { certificates } from "../helpers/certificates-about";
 import fauImg from "../media/fau2.png";
-import reactCert from "../media/reactCert.pdf";
-import frontCert from "../media/frontCert.pdf";
-import javaCert from "../media/javaCert.pdf";
-import javascriptCert from "../media/javascript.pdf";
-import reactCert2 from "../media/LearnReactToday-certificate.pdf";
 
 function About() {
-  var reactCertPdf = reactCert;
-  var frontEndPdf = frontCert;
-  var javascriptCertPdf = javascriptCert;
-  var javaCertPdf = javaCert;
-  var reactCert2Pdf = reactCert2;
-
-  const certList = [
-    {
-      id: "1",
-      name: "JavaScript Concepts",
-      from: "SC Codes",
-      date: "May 2, 2021",
-      source: javascriptCertPdf,
-    },
-    {
-      id: "2",
-      name: "Frontend Concepts",
-      from: "SC Codes",
-      date: "May 9, 2021",
-      source: frontEndPdf,
-    },
-    {
-      id: "3",
-      name: "React Applications",
-      from: "SC Codes",
-      date: "July 4, 2021",
-      source: reactCertPdf,
-    },
-    {
-      id: "4",
-      name: "Java Concepts",
-      from: "SC Codes",
-      date: "July 14, 2021",
-      source: javaCertPdf,
-    },
-    {
-      id: "5",
-      name: "Learn React Today",
-      from: "Web Dev Simplified",
-      date: "Dec 16 2021",
-      source: reactCert2Pdf,
-    },
-  ];
-
-  var fauMIS =
+  const fauMIS =
     "https://business.fau.edu/undergraduate/majors/management-information-systems/";
-  var fauBus = "https://business.fau.edu/";
-  var scCodesMain = "https://learning.sccodes.org/library/";
+  const fauBus = "https://business.fau.edu/";
+  const scCodesMain = "https://learning.sccodes.org/library/";
 
   return (
     <div>
@@ -78,14 +29,18 @@ function About() {
 
       <Container className="">
         <div className="spacing"></div>
-        <Container className="accordianContainer">
-          <Accordion className="accordianAbout">
-            <Card className="accordianHeader">
-              <Accordion.Toggle as={Card.Header} eventKey="0">
+        <Container className="accordionContainer">
+          <Accordion className="accordionAbout">
+            <Card className="accordionHeader">
+              <Accordion.Toggle
+                as={Card.Header}
+                className="about__accordion-header"
+                eventKey="0"
+              >
                 About this Website
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
-                <Card.Body className="accordianBody">
+                <Card.Body className="accordionBody">
                   <Card.Text>
                     This website was designed using react and is hosted on
                     Netlify using continuous deployment with Github. Thanks for
@@ -103,25 +58,29 @@ function About() {
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card className="accordianHeader">
-              <Accordion.Toggle as={Card.Header} eventKey="1">
+            <Card className="accordionHeader">
+              <Accordion.Toggle
+                as={Card.Header}
+                eventKey="1"
+                className="about__accordion-header"
+              >
                 About Ryan
               </Accordion.Toggle>
 
               <Accordion.Collapse eventKey="1">
-                <Card.Body className="accordianBody">
+                <Card.Body className="accordionBody">
                   <Card.Text>
                     After achieving my second Bachelor's degree majoring in
                     Management Information Systems in 2013 I fell in love with
-                    software engineering. I started coding with Java and Java
-                    FX. Next I expanded my languages to include Python,
-                    JavaScript, JSON, HTML/CSS, SQL, C++ ASP.Net and I kept
-                    going from there.
+                    software engineering. I started coding with Java SE. Next I
+                    expanded my languages to include Python, JavaScript, JSON,
+                    HTML/CSS, SQL, C#, ASP.Net and I kept going from there.
                   </Card.Text>
                   <Card.Text>
-                    I genuinely love breaking larger applications down into
-                    small, manageable components and working to find the most
-                    efficient and effective solution.
+                    Lately I have really enjoyed building apps with React I.
+                    genuinely love breaking larger applications down into small,
+                    manageable components and working to find the most efficient
+                    and effective solution.
                   </Card.Text>
                 </Card.Body>
               </Accordion.Collapse>
@@ -191,10 +150,10 @@ function About() {
             <h2>Certificates</h2>
           </Card.Header>
           <Card.Body className="certBody">
-            <DisplayList key={"certList"} as="" items={certList} />
-            <div className="centerdButton">
+            <DisplayList key={"certList"} as="" items={certificates} />
+            <div className="centeredButton">
               <Button variant="primary" className="" href={scCodesMain}>
-                See the SC Codes Teaching Librairy
+                See the SC Codes Teaching Library
               </Button>
             </div>
           </Card.Body>

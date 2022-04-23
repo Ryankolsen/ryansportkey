@@ -47,7 +47,6 @@
   object-fit: cover;
   background-position: center;
   position: relative;
-  /* position: fixed; */
   background-repeat: no-repeat;
   background-size: cover;
   border: 2px solid black;
@@ -57,7 +56,6 @@
 
 .carousel__carousel-inner-left {
   float: left;
-  /* z-index: 2; */
   height: 398px;
   width: 8%;
   background-color: rgba(91, 100, 104, 0.4);
