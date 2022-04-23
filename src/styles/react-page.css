@@ -2,11 +2,12 @@
 .react_page__header-container {
   background-color: rgb(181, 220, 255);
   width: 45%;
+  min-width: 450px;
   border-radius: 15px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-  opacity: 0.8;
+  opacity: 0.9;
   margin-top: 25px;
 }
 
@@ -17,10 +18,17 @@
   opacity: 1;
   /* text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; */
 }
-.react_page__header-container.hooks {
+
+.react_page__header-overline {
   margin-top: 35px;
+  border-top: 6px black solid;
+
+  width: 100%;
 }
 
+.react_page__container {
+  width: 100%;
+}
 .reactCenteredContainer {
   display: flex;
   justify-content: center;

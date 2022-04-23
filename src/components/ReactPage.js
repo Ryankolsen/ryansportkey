@@ -18,24 +18,16 @@ const ReactPage = () => {
         projectCarouselObjects={projectCarouselObjects}
         numberSlides={3}
       />
-      <div className="react_page__header-container hooks">
-        <h3 className="react_page__reactBanner">React Hooks</h3>
+      <div className="react_page__header-overline"></div>
+      <div className="react_page__header-container second ">
+        <h3 className="react_page__reactBanner">Fun With React</h3>
       </div>
-      <Container
-        className=""
-        style={{ justifyContent: "center", alignItems: "center" }}
-      >
+
+      <div className="react_page__container">
         <ButtonCounter />
         <HeroesDisplay />
-      </Container>
-      <Container
-        className="p-5"
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      </div>
+      <Container className="p-5">
         <Button as={Link} to="/">
           Home
         </Button>
