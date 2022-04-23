@@ -16,7 +16,7 @@ const ReactPage = () => {
 
       <Carousel
         projectCarouselObjects={projectCarouselObjects}
-        numberSlides={3}
+        numberSlides={4}
       />
       <div className="react_page__header-overline"></div>
       <div className="react_page__header-container second ">

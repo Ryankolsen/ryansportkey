@@ -22,16 +22,15 @@ function About() {
   return (
     <div>
       <Container className="">
-        <Row className="rounded-right projectBannerRow">
-          {/* <h1 className="projectBanner">About</h1> */}
-        </Row>
+        <div className="about__container-h1">
+          <h1 className="about__container__h1">About</h1>
+        </div>
       </Container>
 
       <Container className="">
-        <div className="spacing"></div>
-        <Container className="accordionContainer">
-          <Accordion className="accordionAbout">
-            <Card className="accordionHeader">
+        <Container className="about__accordion-container">
+          <Accordion className="about__accordion-about">
+            <Card className="about__accordion-header ">
               <Accordion.Toggle
                 as={Card.Header}
                 className="about__accordion-header"
@@ -40,7 +39,7 @@ function About() {
                 About this Website
               </Accordion.Toggle>
               <Accordion.Collapse eventKey="0">
-                <Card.Body className="accordionBody">
+                <Card.Body className="about__accordion-body">
                   <Card.Text>
                     This website was designed using react and is hosted on
                     Netlify using continuous deployment with Github. Thanks for
@@ -58,7 +57,7 @@ function About() {
                 </Card.Body>
               </Accordion.Collapse>
             </Card>
-            <Card className="accordionHeader">
+            <Card className="about__accordion-header ">
               <Accordion.Toggle
                 as={Card.Header}
                 eventKey="1"
@@ -68,7 +67,7 @@ function About() {
               </Accordion.Toggle>
 
               <Accordion.Collapse eventKey="1">
-                <Card.Body className="accordionBody">
+                <Card.Body className="about__accordion-body">
                   <Card.Text>
                     After achieving my second Bachelor's degree majoring in
                     Management Information Systems in 2013 I fell in love with
@@ -88,50 +87,54 @@ function About() {
           </Accordion>
         </Container>
 
-        <Row className="eduRow">
-          <CardColumns className="eduCard mt-3 mb-5">
+        <Row className="about__eduRow">
+          <CardColumns className="about__eduCard mt-3 mb-5">
             <Card style={{ height: "355px" }}>
-              <Card.Header className="fauCard">
+              <Card.Header className="about__fauCard">
                 Florida Atlantic University
               </Card.Header>
-              <Card.Body className=" mb-4">
-                <Card.Title className="degreeTitle">
+              <Card.Body className="about__edu-card-body ">
+                <Card.Title className="__about-degree-title">
                   Bachelor’s of Business Admin Cum Laude
                 </Card.Title>
-                <Card.Text className="cardText">
+                <Card.Text className="about__card-text">
                   Major: Management Information Systems, Completed 2013
                 </Card.Text>
-                <Card.Title className="degreeTitle mt-3">
+                <Card.Title className="__about-degree-title mt-3">
                   Courses Included:
                 </Card.Title>
-                <Card.Text className="cardText">
+                <Card.Text className="about__card-text">
                   Java SE, Database, Social Media, Web Design, Data
                   Communications, IT Security
                 </Card.Text>
                 <Button variant="primary" className="" href={fauMIS}>
                   FAU MIS Program
                 </Button>
-                <img className="fauImg" src={fauImg} alt="FAU Logo"></img>
+                <img
+                  className="__about-fauImg"
+                  src={fauImg}
+                  alt="FAU Logo"
+                ></img>
               </Card.Body>
             </Card>
           </CardColumns>
 
-          <CardColumns className="eduCard mt-3 ">
+          <CardColumns className="about__eduCard mt-3 ">
             <Card style={{ height: "355px" }}>
-              <Card.Header className="fauCard">
+              <Card.Header className="about__fauCard">
                 Florida Atlantic University
               </Card.Header>
-              <Card.Body>
-                <Card.Title className="degreeTitle">
+              <Card.Body className="about__edu-card-body">
+                <Card.Title className="__about-degree-title">
                   Bachelor’s of Business Admin Cum Laude
                 </Card.Title>
-                <Card.Text className="cardText">
+                <Card.Text className="about__card-text">
                   Double Major: Business Admin and Marketing, Completed 2008{" "}
                 </Card.Text>
-                <Card.Title className="degreeTitle mt-3">
+                <Card.Title className="__about-degree-title mt-3">
                   Courses Included:{" "}
                 </Card.Title>
-                <Card.Text className="cardText">
+                <Card.Text className="about__card-text">
                   International Marketing, Entrepreneurial, International
                   Business, Supply Chain, Program Management
                 </Card.Text>
@@ -139,17 +142,21 @@ function About() {
                 <Button variant="primary" className="" href={fauBus}>
                   FAU Business Program
                 </Button>
-                <img className="fauImg" src={fauImg} alt="FAU Logo"></img>
+                <img
+                  className="__about-fauImg"
+                  src={fauImg}
+                  alt="FAU Logo"
+                ></img>
               </Card.Body>
             </Card>
           </CardColumns>
         </Row>
 
-        <Card className="certCard mt-3 mb-3 ">
-          <Card.Header className="cerCard">
+        <Card className="about__certCard mt-3 mb-3 ">
+          <Card.Header className="__about-cert-card">
             <h2>Certificates</h2>
           </Card.Header>
-          <Card.Body className="certBody">
+          <Card.Body className="__about-cert-body">
             <DisplayList key={"certList"} as="" items={certificates} />
             <div className="centeredButton">
               <Button variant="primary" className="" href={scCodesMain}>

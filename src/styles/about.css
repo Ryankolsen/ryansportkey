@@ -1,5 +1,25 @@
 /******************************** About Page ******************************************/
-.accordionContainer {
+:root {
+  --blue-bg-color: rgb(43, 106, 199);
+  --light-blue-bg-color: rgb(219, 241, 253);
+}
+
+.about__container-h1 {
+  width: 200px;
+  background-color: var(--blue-bg-color);
+  margin: auto;
+  text-align: center;
+  border-radius: 10%;
+  opacity: 0.9;
+}
+.about__container__h1 {
+  font-family: "Cinzel Decorative", cursive;
+  font-family: "Miss Fajardose", cursive;
+  font-family: "Rye", cursive;
+  color: rgb(242, 251, 255);
+  font-size: 45px;
+}
+.about__accordion-container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -7,21 +27,21 @@
   float: center;
 }
 
-.accordionAbout {
+.about__accordion-about {
   justify-content: center;
   text-align: center;
   display: center;
   width: 750px;
 }
 
-.accordionHeader {
+.about__accordion-header {
   max-width: 750px;
   font-family: "Cinzel Decorative", cursive;
   font-family: "Miss Fajardose", cursive;
   font-family: "Rye", cursive;
   font-size: 20px;
-  background-color: rgb(43, 106, 199);
-  color: white;
+  background-color: var(--blue-bg-color);
+  color: rgb(242, 251, 255);
   justify-content: center;
   text-align: center;
 }
@@ -30,48 +50,39 @@
   background-color: rgb(32, 146, 240);
   transition: background-color 1s, color 1s;
 }
-.accordionBody {
-  background-color: aliceblue;
+.about__accordion-body {
+  background-color: var(--light-blue-bg-color);
   color: rgb(25, 25, 44);
 }
 
-.aboutBanner {
-  text-align: center;
-  background-color: ivory;
-  margin-right: 100px;
-  margin-left: 100px;
-  border-radius: 5px;
-}
-
-.spacing {
-  width: 100%;
-  min-height: 15px;
-  float: left;
-}
-
-.eduRow {
+.about__eduRow {
   justify-content: center;
 }
 
-.eduCard {
+.about__eduCard {
   max-width: 550px;
 }
 
-.fauCard {
+.about__edu-card-body {
+  background-color: var(--light-blue-bg-color);
+  margin-top: 15px;
+}
+
+.about__fauCard {
   font-family: "Cinzel Decorative", cursive;
   font-family: "Miss Fajardose", cursive;
   font-family: "Rye", cursive;
   font-size: 20px;
-  background-color: rgb(43, 106, 199);
-  color: white;
+  background-color: var(--blue-bg-color);
+  color: rgb(242, 251, 255);
   justify-content: center;
   text-align: center;
   margin-bottom: -15px;
 }
 
-.cerCard {
-  background-color: rgb(43, 106, 199);
-  color: white;
+.__about-cert-card {
+  background-color: var(--blue-bg-color);
+  color: rgb(242, 251, 255);
   justify-content: center;
   text-align: center;
   font-family: "Cinzel Decorative", cursive;
@@ -79,16 +90,16 @@
   font-family: "Rye", cursive;
 }
 
-.degreeTitle {
+.__about-degree-title {
   font-family: "Cinzel Decorative", cursive;
   font-family: "Miss Fajardose", cursive;
   font-family: "Rye", cursive;
 }
 
-.fauImg {
+.__about-fauImg {
   float: right;
 }
-.cardText {
+.about__card-text {
   font-family: cursive, cursive;
 }
 
@@ -97,13 +108,13 @@
   font-family: "Miss Fajardose", cursive;
   font-family: "Rye", cursive;
 }
-.certName {
+.__about-cert-name {
   /* max-width: 350px; */
   min-width: 250px;
   text-align: center;
 }
 
-.certText {
+.__about-cert-text {
   max-width: 350px;
   display: flex;
   justify-content: center;
@@ -111,7 +122,7 @@
   text-align: center;
 }
 
-.certCard {
+.about__certCard {
   margin: 2%;
 }
 
@@ -120,8 +131,8 @@
   max-height: 500;
 }
 
-.certBody {
-  background-color: rgb(213, 222, 243);
+.__about-cert-body {
+  background-color: var(--light-blue-bg-color);
 }
 
 /************ Image Zooming **************/

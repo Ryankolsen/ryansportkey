@@ -1,6 +1,7 @@
 import googleApiImage from "../media/googleApiImage2.jpg";
 import connMod from "../media/ConnModCodeImgBoth.png";
 import pokemonImg from "../media/pokemon.jpg";
+import reduxToolkitImg from "../media/reduxToolkitImg.png";
 
 export const projectCarouselObjects = [
   {
@@ -44,6 +45,21 @@ export const projectCarouselObjects = [
       firstLinkButtonText: "Code on GitHub",
       secondLink: "",
       secondLinkButtonText: "",
+    },
+  },
+  {
+    key: 4,
+    image: reduxToolkitImg,
+    projectTitle: "Redux Essentials Example",
+    projectDescriptions:
+      "This is the completed Redux Essentials tutorial from Redux docs including Dataflow, Async Logic and Data Fetching, Performance and Normalizing Data. I leaned a ton from completing this small social media feed app with some real-world features",
+
+    links: {
+      firstLink: "https://github.com/Ryankolsen/react-reduxtoolkit-app",
+      firstLinkButtonText: "Code on GitHub",
+      secondLink:
+        "https://redux.js.org/tutorials/essentials/part-1-overview-concepts",
+      secondLinkButtonText: "Redux Tutorial Link",
     },
   },
 ];
