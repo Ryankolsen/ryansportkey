@@ -42,7 +42,7 @@ export default function HeroesForm({ heroes, setHeroes }) {
           style={{ justifyContent: "center" }}
           className="HeroColumn counterColumn block-example "
         >
-          <h1 className="heroesMainTitle">Add Your Hero</h1>
+          <h1 className="heroes-display__h1">Add Your Hero</h1>
 
           <div className="form-floating mb-3">
             <input

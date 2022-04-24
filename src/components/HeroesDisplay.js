@@ -29,43 +29,39 @@ export default function Heroes() {
   }
   return (
     <div className="react_page__header-overline">
-      <Container>
-        <Row className="reactCenteredContainer p-2">
-          <Col style={{ justifyContent: "center" }} className="HeroColumn">
-            <h1 className="heroesMainTitle">Strongest Heroes</h1>
-            <HeroList heroes={heroes} toggleHeroes={toggleHeroes} />
-            <h3 className="textHeader">
-              {" "}
-              {`${heroes && heroes.length ? "" : "Add Some Heroes"}`}
-            </h3>
-            <div className="d-grid gap-2">
-              <Button
-                className="centeredButton mb-3"
-                variant="warning"
-                onClick={handleClearHeroes}
-              >
-                Remove Selected Heroes from List
-              </Button>
-            </div>
-          </Col>
-          <Col
-            style={{ justifyContent: "center" }}
-            className="HeroColumn counterColumn ml-3  "
-          >
-            <HeroesForm heroes={heroes} setHeroes={setHeroes} />
-            <div className="imageZoomDiv">
-              <h3 className="heroesImageTitle"> Hero Code Snippets: </h3>
-              <ZoomImage imageSm={imageSm} imageLg={imageLg} />
-              <ZoomImage imageSm={imageSmTwo} imageLg={imageLgTwo} />
-              <ZoomImage imageSm={imageSmThree} imageLg={imageLgThree} />
-              <ZoomImage imageSm={imageSmFour} imageLg={imageLgFour} />
-            </div>
-          </Col>
-          <Col
-            style={{ justifyContent: "center" }}
-            className="HeroColumn counterColumn ml-3 block-example border border-dark"
-          ></Col>
-        </Row>
+      <Container className="heroes-display__container">
+        <div
+          style={{ justifyContent: "center" }}
+          className="heroes-display__hero-column"
+        >
+          <h1 className="heroes-display__h1">Strongest Heroes</h1>
+          <HeroList heroes={heroes} toggleHeroes={toggleHeroes} />
+          <h3 className="textHeader">
+            {`${heroes && heroes.length ? "" : "Add Some Heroes"}`}
+          </h3>
+          <div className="d-grid gap-2">
+            <Button
+              className="centeredButton mb-3"
+              variant="warning"
+              onClick={handleClearHeroes}
+            >
+              Remove Selected Heroes from List
+            </Button>
+          </div>
+        </div>
+        <div
+          style={{ justifyContent: "center" }}
+          className="heroes-display__hero-column counterColumn ml-3  "
+        >
+          <HeroesForm heroes={heroes} setHeroes={setHeroes} />
+          <div className="imageZoomDiv">
+            <h3 className="heroesImageTitle"> Hero Code Snippets: </h3>
+            <ZoomImage imageSm={imageSm} imageLg={imageLg} />
+            <ZoomImage imageSm={imageSmTwo} imageLg={imageLgTwo} />
+            <ZoomImage imageSm={imageSmThree} imageLg={imageLgThree} />
+            <ZoomImage imageSm={imageSmFour} imageLg={imageLgFour} />
+          </div>
+        </div>
       </Container>
     </div>
   );
