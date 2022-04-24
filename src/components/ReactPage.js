@@ -19,9 +19,6 @@ const ReactPage = () => {
         numberSlides={4}
       />
       <div className="react_page__header-overline"></div>
-      <div className="react_page__header-container second ">
-        <h3 className="react_page__reactBanner">Fun With React</h3>
-      </div>
 
       <div className="react_page__container">
         <ButtonCounter />

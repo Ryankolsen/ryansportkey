@@ -26,7 +26,7 @@ export const Layout = (props) => {
               navbarScroll
             >
               <Nav.Link as={Link} to="/ReactPage" className="mr-4">
-                React{" "}
+                React
               </Nav.Link>
               <NavDropdown title="Links" id="navbarScrollingDropdown">
                 <NavDropdown.Item href="https://github.com/Ryankolsen">
