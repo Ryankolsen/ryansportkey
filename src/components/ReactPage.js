@@ -10,9 +10,9 @@ import { projectCarouselObjects } from "../helpers/react-project-carousel";
 const ReactPage = () => {
   return (
     <div>
-      <div className="react_page__header-container">
+      {/* <div className="react_page__header-container">
         <h3 className="react_page__reactBanner">React Projects</h3>
-      </div>
+      </div> */}
 
       <Carousel
         projectCarouselObjects={projectCarouselObjects}
