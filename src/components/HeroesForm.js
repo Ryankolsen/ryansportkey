@@ -29,7 +29,9 @@ export default function HeroesForm({ heroes, setHeroes }) {
       return [
         ...prevHeroes,
         { id: uuidv4(), name: name, strength: strength, complete: false },
-      ];
+      ].sort(function (a, b) {
+        return a.strength - b.strength;
+      });
     });
     heroNameRef.current.value = null;
     heroStrengthRef.current.value = null;
@@ -71,7 +73,7 @@ export default function HeroesForm({ heroes, setHeroes }) {
           <div className="centeredButton">
             <Button type="submit" className="mb-3" onClick={handleAddHero}>
               Add Hero
-            </Button>{" "}
+            </Button>
           </div>
         </Col>
       </Row>

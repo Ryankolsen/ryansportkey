@@ -11,6 +11,11 @@
 
 /* General */
 
+:root {
+  --blue-bg-color: rgb(43, 106, 199);
+  --light-blue-bg-color: rgb(219, 241, 253);
+}
+
 *,
 *::before,
 *::after {

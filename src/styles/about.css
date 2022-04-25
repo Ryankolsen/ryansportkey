@@ -1,8 +1,4 @@
 /******************************** About Page ******************************************/
-:root {
-  --blue-bg-color: rgb(43, 106, 199);
-  --light-blue-bg-color: rgb(219, 241, 253);
-}
 
 .about__container-h1 {
   width: 200px;

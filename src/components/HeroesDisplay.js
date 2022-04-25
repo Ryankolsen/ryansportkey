@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Container, Row, Col } from "react-bootstrap";
 
 import HeroList from "./HeroList";
@@ -17,6 +17,11 @@ import imageLgFour from "../media/HeroCodeFour.jpg";
 export default function Heroes() {
   const [heroes, setHeroes] = useState([]);
 
+  //   useEffect(() => {
+  //     const sortedHeroes = sortHeroes();
+  //     setHeroes(sortedHeroes);
+  //   }, [heroes]);
+
   function toggleHeroes(id) {
     const newHeroes = [...heroes];
     const heroTogg = newHeroes.find((hero) => hero.id === id);
@@ -27,13 +32,24 @@ export default function Heroes() {
     const newHeroes = heroes.filter((hero) => !hero.complete);
     setHeroes(newHeroes);
   }
+  const sortHeroes = (storedHeroes) => {
+    console.log("fired");
+    if (storedHeroes.length > 1) {
+      const unsortedHeroes = [...storedHeroes];
+      const sortedHeroes = unsortedHeroes.sort(function (a, b) {
+        return a.strength - b.strength;
+      });
+      console.log(sortedHeroes);
+      //   setHeroes(sortedHeroes);
+      return sortedHeroes;
+    }
+    // setHeroes(heroes);
+  };
+
   return (
     <div className="react_page__header-overline">
       <Container className="heroes-display__container">
-        <div
-          style={{ justifyContent: "center" }}
-          className="heroes-display__hero-column"
-        >
+        <div className="heroes-display__hero-column">
           <h1 className="heroes-display__h1">Strongest Heroes</h1>
           <HeroList heroes={heroes} toggleHeroes={toggleHeroes} />
           <h3 className="textHeader">

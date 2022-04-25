@@ -6,7 +6,6 @@ function Carousel({ projectCarouselObjects, numberSlides }) {
   const [currImg, setCurrImg] = useState(1);
 
   const numProjects = projectCarouselObjects.length;
-  console.log(projectCarouselObjects);
 
   return (
     <div>

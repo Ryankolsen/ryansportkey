@@ -11,12 +11,12 @@
 
 .heroes-display__h1 {
   font-family: "Permanent Marker", cursive;
-  color: darkblue;
+  color: var(--blue-bg-color);
   font-size: 35px;
 }
 
 .heroes-display__hero-column {
-  background-color: rgb(151, 200, 233);
+  background-color: var(--light-blue-bg-color);
   margin: 15px;
   min-width: 350px;
   max-width: 350px;
@@ -38,7 +38,7 @@
 
 .heroesImageTitle {
   font-family: "Permanent Marker", cursive;
-  color: darkblue;
+  color: var(--blue-bg-color);
   font-size: 32px;
 }
 @media screen and (max-width: 800px) {
