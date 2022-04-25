@@ -21,7 +21,6 @@ export default function HeroesForm({ heroes, setHeroes }) {
   function handleAddHero(e) {
     const name = heroNameRef.current.value;
     if (name === "") return;
-
     const strength = heroStrengthRef.current.value.toString();
     if (strength === "") return;
 
@@ -40,10 +39,7 @@ export default function HeroesForm({ heroes, setHeroes }) {
   return (
     <div>
       <Row className=" ">
-        <Col
-          style={{ justifyContent: "center" }}
-          className="HeroColumn counterColumn block-example "
-        >
+        <Col className="HeroColumn counterColumn block-example ">
           <h1 className="heroes-display__h1">Add Your Hero</h1>
 
           <div className="form-floating mb-3">

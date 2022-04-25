@@ -9,7 +9,7 @@
 }
 .button-counter__counter-row {
   padding: 2%;
-  margin: 20px;
+  margin: 35px;
   text-align: center;
   border-width: 2px;
   border-color: black;
@@ -21,6 +21,7 @@
   background-color: var(--light-blue-bg-color);
   height: 240px;
   width: 375px;
+  border-radius: 15px;
 }
 .button-counter__p {
   padding-top: 30px;

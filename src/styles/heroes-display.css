@@ -17,17 +17,19 @@
 
 .heroes-display__hero-column {
   background-color: var(--light-blue-bg-color);
-  margin: 15px;
+  margin: 35px;
   min-width: 350px;
   max-width: 350px;
   min-height: 300px;
   flex: start;
+  border-radius: 15px;
 }
 
 .heroStrengthDisplay {
   color: lightsteelblue;
   background-color: blue;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 .heroNameDisplay {
