@@ -24,7 +24,7 @@ const ButtonCounter = () => {
           <div className="text-center">
             <Button
               variant="danger"
-              className="button-counter__counter-button"
+              className="button-counter__button button-counter__counter-button"
               onClick={() => setCount(count + 1)}
             >
               Don't Click Me!
