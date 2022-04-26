@@ -2,7 +2,6 @@
 .react_page__header-overline {
   margin-top: 35px;
   border-top: 6px black solid;
-
   width: 100%;
 }
 
@@ -33,21 +32,6 @@
 .reactRow {
   display: flex;
 }
-
-/* img {
-  max-width: 20em;
-  display: block;
-  margin: auto;
-}
-
-.imageZoomDiv {
-  margin-top: 2%;
-}
-
-.buttonCode {
-  max-height: 100px;
-  max-width: 300px;
-} */
 
 .textHeader {
   display: flex;

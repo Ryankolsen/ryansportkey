@@ -11,7 +11,7 @@
 
 .heroes-display__h1 {
   font-family: "Permanent Marker", cursive;
-  color: var(--blue-bg-color);
+  color: rgb(0, 0, 59);
   font-size: 35px;
 }
 
@@ -40,8 +40,9 @@
 
 .heroesImageTitle {
   font-family: "Permanent Marker", cursive;
-  color: var(--blue-bg-color);
+  color: rgb(0, 0, 59);
   font-size: 32px;
+  margin-top: 25px;
 }
 @media screen and (max-width: 800px) {
   .heroes-display__container {

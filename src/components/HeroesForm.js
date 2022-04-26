@@ -38,14 +38,13 @@ export default function HeroesForm({ heroes, setHeroes }) {
 
   return (
     <div>
-      <Row className=" ">
-        <Col className="HeroColumn counterColumn block-example ">
+      <Row className="">
+        <Col className="">
           <h1 className="heroes-display__h1">Add Your Hero</h1>
-
-          <div className="form-floating mb-3">
+          <div className="">
             <input
               type="text"
-              className="form-control"
+              className="heroes-form__input form-floating mb-3"
               id="floatingInput"
               placeholder="Enter Hero Name"
               ref={heroNameRef}
@@ -53,10 +52,10 @@ export default function HeroesForm({ heroes, setHeroes }) {
             <label htmlFor="floatingInput">Hero Name</label>
           </div>
 
-          <div className="form-floating mb-3">
+          <div>
             <input
               type="number"
-              className="form-control"
+              className=" form-floating mb-3 heroes-form__input"
               id="floatingInput"
               placeholder="Enter Hero Power Level"
               defaultValue="500"

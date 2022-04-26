@@ -32,7 +32,7 @@ export default function Heroes() {
     <div className="react_page__header-overline">
       <Container className="heroes-display__container">
         <div className="heroes-display__hero-column">
-          <h1 className="heroes-display__h1">Strongest Heroes</h1>
+          <h1 className="heroes-display__h1"> Heroes</h1>
           <HeroList heroes={heroes} toggleHeroes={toggleHeroes} />
           <h3 className="textHeader">
             {`${heroes && heroes.length ? "" : "Add Some Heroes"}`}
