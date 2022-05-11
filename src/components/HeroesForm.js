@@ -52,7 +52,7 @@ export default function HeroesForm({ heroes, setHeroes }) {
         ...prevHeroes,
         { id: uuidv4(), name: name, strength: strength, complete: false },
       ].sort(function (a, b) {
-        return a.strength - b.strength;
+        return b.strength - a.strength;
       });
     });
     heroNameRef.current.value = null;
