@@ -40,10 +40,10 @@ export default function Heroes() {
           <h3 className="textHeader">
             {`${heroes && heroes.length ? "" : "Add Some Heroes"}`}
           </h3>
-          <div className="d-grid gap-2">
+          <div className="heroes-display__remove-button">
             <Button
               className="centeredButton mb-3"
-              variant="warning"
+              variant="danger"
               onClick={handleClearHeroesMongo}
             >
               Remove Selected Heroes
