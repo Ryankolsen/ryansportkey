@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import ZoomImage from "./ZoomImage";
 
 import imageSm from "../media/ButtonCodeSm.jpg";

@@ -1,4 +1,3 @@
-import fauImg from "../media/fau2.png";
 import reactCert from "../media/reactCert.pdf";
 import frontCert from "../media/frontCert.pdf";
 import javaCert from "../media/javaCert.pdf";

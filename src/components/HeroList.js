@@ -8,6 +8,4 @@ export default function HeroList({ heroes, toggleHeroes }) {
         return <Heroes key={hero.id} toggleHeroes={toggleHeroes} hero={hero} />;
       })
     : null;
-
-  return null;
 }

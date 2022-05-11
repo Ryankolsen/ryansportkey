@@ -1,18 +1,10 @@
-import React, { useState, useEffect } from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import React, { useState } from "react";
+import { Button, Container } from "react-bootstrap";
 
 import HeroList from "./HeroList";
 import HeroesForm from "./HeroesForm";
-import ZoomImage from "./ZoomImage";
 
-import imageSm from "../media/HeroCodeOneSm.jpg";
-import imageLg from "../media/HeroCodeOne.jpg";
-import imageSmTwo from "../media/HeroCodeTwoSm.jpg";
-import imageLgTwo from "../media/HeroCodeTwo.jpg";
-import imageSmThree from "../media/HeroCodeThreeSm.jpg";
-import imageLgThree from "../media/HeroCodeThree.jpg";
-import imageSmFour from "../media/HeroCodeFourSm.jpg";
-import imageLgFour from "../media/HeroCodeFour.jpg";
+//import ZoomImage from "./ZoomImage"; disabled see noted below
 
 export default function Heroes() {
   const [heroes, setHeroes] = useState([]);
@@ -30,19 +22,15 @@ export default function Heroes() {
     const newHeroes = heroes.filter((hero) => !hero.complete);
     setHeroes(newHeroes);
     deletedHeroes.map((hero) => {
-      console.log(hero.id);
       //call fetch
       deleteHeroesMongo(hero.id);
+      return null;
     });
   }
 
   async function deleteHeroesMongo(id) {
     const response = await fetch(`.netlify/functions/delete-hero?&id=${id}`);
-  }
-
-  function handleClearHeroes() {
-    const newHeroes = heroes.filter((hero) => !hero.complete);
-    setHeroes(newHeroes);
+    console.log(response);
   }
 
   return (
