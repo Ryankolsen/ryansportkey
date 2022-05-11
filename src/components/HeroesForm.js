@@ -1,22 +1,74 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Button, Row, Col } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid"; //npm i uuid
 
 export default function HeroesForm({ heroes, setHeroes }) {
+  const [fetchState, setFetchState] = useState();
   const LOCAL_STORAGE_KEY = "myApp.Heroes";
   const heroNameRef = useRef();
   const heroStrengthRef = useRef();
 
   //load Heroes List
+  // useEffect(() => {
+  //   const storedHeroes = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
+  //   if (storedHeroes) setHeroes(storedHeroes);
+  // }, [setHeroes]);
+
   useEffect(() => {
-    const storedHeroes = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY));
-    if (storedHeroes) setHeroes(storedHeroes);
-  }, [setHeroes]);
+    const heroes = fetchHeroesMongoDb().then((hero) => {
+      hero.sort(function (a, b) {
+        return a.strength - b.strength;
+      });
+      setHeroes(hero);
+    });
+  }, []);
 
   //Save Heroes List
-  useEffect(() => {
-    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(heroes));
-  }, [heroes]);
+  // useEffect(() => {
+  //   localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(heroes));
+  // }, [heroes]);
+
+  async function fetchHeroesMongoDb() {
+    const response = await fetch(".netlify/functions/fetch-all-heroes", heroes);
+    const result = await response.json();
+
+    heroes = result.msg.documents;
+    console.log(heroes);
+
+    return heroes;
+  }
+  async function handleAddHeroMongo() {
+    const name = heroNameRef.current.value;
+    if (name === "") return;
+    const strength = heroStrengthRef.current.value.toString();
+    if (strength === "") return;
+    const newHero = {
+      id: uuidv4(),
+      name: name,
+      strength: strength,
+      complete: false,
+    };
+
+    const response = await fetch(
+      `.netlify/functions/add-hero?
+      &id=${newHero.id}
+      &name=${name}
+      &strength=${strength}
+      &complete=${true}
+    `
+    );
+
+    setHeroes((prevHeroes) => {
+      return [
+        ...prevHeroes,
+        { id: uuidv4(), name: name, strength: strength, complete: false },
+      ].sort(function (a, b) {
+        return a.strength - b.strength;
+      });
+    });
+    heroNameRef.current.value = null;
+    heroStrengthRef.current.value = null;
+  }
 
   function handleAddHero(e) {
     const name = heroNameRef.current.value;
@@ -66,7 +118,7 @@ export default function HeroesForm({ heroes, setHeroes }) {
             </label>
           </div>
           <div className="centeredButton">
-            <Button type="submit" className="mb-3" onClick={handleAddHero}>
+            <Button type="submit" className="mb-3" onClick={handleAddHeroMongo}>
               Add Hero
             </Button>
           </div>
