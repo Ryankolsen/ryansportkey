@@ -65,6 +65,7 @@ export default function HeroesForm({ heroes, setHeroes }) {
         <Col className="">
           <h1 className="heroes-display__h1">Add Your Hero</h1>
           <div className="">
+            <label htmlFor="floatingInput">Hero Name</label>
             <input
               type="text"
               className="heroes-form__input form-floating mb-3"
@@ -72,10 +73,12 @@ export default function HeroesForm({ heroes, setHeroes }) {
               placeholder="Enter Hero Name"
               ref={heroNameRef}
             />
-            <label htmlFor="floatingInput">Hero Name</label>
           </div>
 
           <div>
+            <label htmlFor="floatingInput">
+              Hero Power Level (enter a number)
+            </label>
             <input
               type="number"
               className=" form-floating mb-3 heroes-form__input"
@@ -84,9 +87,6 @@ export default function HeroesForm({ heroes, setHeroes }) {
               defaultValue="500"
               ref={heroStrengthRef}
             />
-            <label htmlFor="floatingInput">
-              Hero Power Level (enter a number)
-            </label>
           </div>
           <div className="centeredButton">
             <Button type="submit" className="mb-3" onClick={handleAddHeroMongo}>

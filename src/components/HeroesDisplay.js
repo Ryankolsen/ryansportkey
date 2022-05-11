@@ -55,9 +55,27 @@ export default function Heroes() {
         <div className="heroes-display__hero-column counterColumn ml-3  ">
           <HeroesForm heroes={heroes} setHeroes={setHeroes} />
           <div className="imageZoomDiv">
-            <h3 className="heroesImageTitle"> See the code: </h3>
             <p>
-              <a href="https://github.com/Ryankolsen/ryansportkey">Here</a>
+              These superheroes are stored on a MongoDb database. CRUD
+              operations are performed using Netlify serverless functions to
+              connect directly to the MongoDb data API
+            </p>
+            <h3 className="heroesImageTitle">
+              <a href="https://github.com/Ryankolsen/ryansportkey">
+                See the code
+              </a>
+            </h3>
+            <p>
+              {" "}
+              <a href="https://www.netlify.com/products/functions/">
+                Learn about Netlify Serverless Functions
+              </a>
+            </p>
+            <p>
+              {" "}
+              <a href="https://www.mongodb.com/docs/atlas/api/data-api/">
+                Learn about MongoDb Data API
+              </a>
             </p>
             {/* old images to be replaced */}
             {/* <ZoomImage imageSm={imageSm} imageLg={imageLg} />
