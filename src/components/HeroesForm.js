@@ -10,7 +10,7 @@ export default function HeroesForm({ heroes, setHeroes }) {
   useEffect(() => {
     fetchHeroesMongoDb().then((hero) => {
       hero.sort(function (a, b) {
-        return a.strength - b.strength;
+        return b.strength - a.strength;
       });
       setHeroes(hero);
     });
