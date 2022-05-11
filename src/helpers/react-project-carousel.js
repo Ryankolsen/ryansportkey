@@ -2,6 +2,7 @@ import googleApiImage from "../media/googleApiImage2.jpg";
 import connMod from "../media/ConnModCodeImgBoth.png";
 import pokemonImg from "../media/pokemon.jpg";
 import reduxToolkitImg from "../media/reduxToolkitImg.png";
+import reactImg from "../media/reactImg.jpg";
 
 export const projectCarouselObjects = [
   {
@@ -21,6 +22,21 @@ export const projectCarouselObjects = [
   },
   {
     key: 2,
+    image: reactImg,
+    projectTitle: "This Website",
+    projectDescriptions:
+      "This site was created with react and is hosted on Netlify with continuous deployment thru Github. " +
+      "The hero list below is stored on MongoDB using Netlify serverless functions to connect direct to the MongoDP API",
+
+    links: {
+      firstLink: "https://github.com/Ryankolsen/ryansportkey",
+      firstLinkButtonText: "Code on GitHub",
+      secondLink: "",
+      secondLinkButtonText: "",
+    },
+  },
+  {
+    key: 3,
     image: googleApiImage,
     projectTitle: "React Google Book API",
     projectDescriptions: `This App uses React Redux Toolkit, 
@@ -34,7 +50,7 @@ export const projectCarouselObjects = [
     },
   },
   {
-    key: 3,
+    key: 4,
     image: pokemonImg,
     projectTitle: "React Pokemon API",
     projectDescriptions:
@@ -48,7 +64,7 @@ export const projectCarouselObjects = [
     },
   },
   {
-    key: 4,
+    key: 5,
     image: reduxToolkitImg,
     projectTitle: "Redux Essentials Example",
     projectDescriptions:

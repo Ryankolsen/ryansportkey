@@ -3,7 +3,6 @@ import { Button, Row, Col } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid"; //npm i uuid
 
 export default function HeroesForm({ heroes, setHeroes }) {
-  // const [fetchState, setFetchState] = useState();
   const heroNameRef = useRef();
   const heroStrengthRef = useRef();
 
