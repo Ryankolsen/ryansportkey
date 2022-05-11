@@ -4,8 +4,6 @@ import { Button, Container } from "react-bootstrap";
 import HeroList from "./HeroList";
 import HeroesForm from "./HeroesForm";
 
-//import ZoomImage from "./ZoomImage"; disabled see noted below
-
 export default function Heroes() {
   const [heroes, setHeroes] = useState([]);
 
@@ -54,34 +52,37 @@ export default function Heroes() {
         </div>
         <div className="heroes-display__hero-column counterColumn ml-3  ">
           <HeroesForm heroes={heroes} setHeroes={setHeroes} />
-          <div className="imageZoomDiv">
+          <div className="">
+            <div className="">
+              <p className="heroes-display__hero-column-description">
+                These superheroes are stored on a MongoDb database. CRUD
+                operations are performed using Netlify serverless functions to
+                connect directly to the MongoDb data API
+              </p>
+            </div>
+            <div className="heroes-display__hero-column-code">
+              <h3 className="heroesImageTitle">
+                <a href="https://github.com/Ryankolsen/ryansportkey">
+                  See the code
+                </a>
+              </h3>
+            </div>
+            <div className="heroes-display__hero-column-link-container"></div>
             <p>
-              These superheroes are stored on a MongoDb database. CRUD
-              operations are performed using Netlify serverless functions to
-              connect directly to the MongoDb data API
-            </p>
-            <h3 className="heroesImageTitle">
-              <a href="https://github.com/Ryankolsen/ryansportkey">
-                See the code
-              </a>
-            </h3>
-            <p>
-              {" "}
               <a href="https://www.netlify.com/products/functions/">
                 Learn about Netlify Serverless Functions
               </a>
             </p>
             <p>
-              {" "}
               <a href="https://www.mongodb.com/docs/atlas/api/data-api/">
                 Learn about MongoDb Data API
               </a>
             </p>
-            {/* old images to be replaced */}
-            {/* <ZoomImage imageSm={imageSm} imageLg={imageLg} />
-            <ZoomImage imageSm={imageSmTwo} imageLg={imageLgTwo} />
-            <ZoomImage imageSm={imageSmThree} imageLg={imageLgThree} />
-            <ZoomImage imageSm={imageSmFour} imageLg={imageLgFour} /> */}
+            <p>
+              <a href="https://www.learnwithjason.dev/blog/serverless-functions/query-strings-serverless-functions">
+                Access Params in Serverless Functions
+              </a>
+            </p>
           </div>
         </div>
       </Container>
