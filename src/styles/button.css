@@ -1,6 +1,6 @@
 .button-counter__container {
   justify-content: center;
-  align-items: top;
+  align-items: center;
   text-align: center;
   float: center;
   display: grid;
@@ -9,7 +9,7 @@
 }
 .button-counter__counter-row {
   padding: 2%;
-  margin: 35px;
+  margin: 35px 35px 35px 35px;
   text-align: center;
   border-width: 2px;
   border-color: black;
