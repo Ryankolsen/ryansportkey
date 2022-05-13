@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef } from "react";
 import { Button, Row, Col } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid"; //npm i uuid
 
@@ -16,15 +16,16 @@ export default function HeroesForm({ heroes, setHeroes }) {
   //   // eslint-disable-next-line
   // }, []);
 
-  async function fetchHeroesMongoDb() {
-    const response = await fetch(".netlify/functions/fetch-all-heroes", heroes);
-    const result = await response.json();
+  // async function fetchHeroesMongoDb() {
+  //   const response = await fetch(".netlify/functions/fetch-all-heroes", heroes);
+  //   const result = await response.json();
 
-    heroes = result.msg.documents;
-    console.log(heroes);
+  //   heroes = result.msg.documents;
+  //   console.log(heroes);
 
-    return heroes;
-  }
+  //   return heroes;
+  // }
+
   async function handleAddHeroMongo() {
     const name = heroNameRef.current.value;
     if (name === "") return;

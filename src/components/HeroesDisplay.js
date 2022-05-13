@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button, Container } from "react-bootstrap";
-import { useQuery, useQueryClient } from "react-query";
+import { useQuery } from "react-query";
 
 import HeroList from "./HeroList";
 import HeroesForm from "./HeroesForm";
