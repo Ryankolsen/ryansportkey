@@ -1,5 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Container } from "react-bootstrap";
+import { useQuery, useQueryClient } from "react-query";
 
 import HeroList from "./HeroList";
 import HeroesForm from "./HeroesForm";
@@ -7,30 +8,46 @@ import HeroesForm from "./HeroesForm";
 export default function Heroes() {
   const [heroes, setHeroes] = useState([]);
 
+  const { isLoading, error, data } = useQuery("repoData", () =>
+    fetch(".netlify/functions/fetch-all-heroes").then((res) => res.json())
+  );
+
+  useEffect(() => {
+    const retrievedHeroes = data?.msg.documents;
+    if (retrievedHeroes && retrievedHeroes !== "undefined") {
+      var sortedHeroes = retrievedHeroes.sort(function (a, b) {
+        return b.strength - a.strength;
+      });
+      setHeroes(sortedHeroes);
+    }
+  }, [data]);
+
   function toggleHeroes(id) {
     const newHeroes = [...heroes];
     const heroTogg = newHeroes.find((hero) => hero.id === id);
     heroTogg.complete = !heroTogg.complete;
     setHeroes(newHeroes);
   }
+
   function handleClearHeroesMongo() {
     const deletedHeroes = heroes.filter((hero) => {
       return hero.complete;
     });
     const newHeroes = heroes.filter((hero) => !hero.complete);
     setHeroes(newHeroes);
-    deletedHeroes.map((hero) => {
-      //call fetch
-      deleteHeroesMongo(hero.id);
-      return null;
+    deleteHeroesMongo(deletedHeroes);
+  }
+
+  async function deleteHeroesMongo(deletedHeroes) {
+    await deletedHeroes.forEach((hero) => {
+      console.log(hero.id);
+      fetch(`.netlify/functions/delete-hero?&id=${hero.id}`);
     });
   }
 
-  async function deleteHeroesMongo(id) {
-    const response = await fetch(`.netlify/functions/delete-hero?&id=${id}`);
-    console.log(response);
-  }
+  if (isLoading) return "Loading...";
 
+  if (error) return "An error has occurred: " + error.message;
   return (
     <div className="react_page__header-overline">
       <Container className="heroes-display__container">
@@ -50,7 +67,7 @@ export default function Heroes() {
             </Button>
           </div>
         </div>
-        <div className="heroes-display__hero-column counterColumn ml-3  ">
+        <div className="heroes-display__hero-column counterColumn  ">
           <HeroesForm heroes={heroes} setHeroes={setHeroes} />
           <div className="">
             <div className="">
