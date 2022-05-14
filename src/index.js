@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -15,16 +15,18 @@ import "./fonts/AgentOrange.ttf";
 import "./fonts/FunZone.ttf";
 
 ReactDOM.render(
-  <Router>
-    <Layout>
-      <Switch>
-        <NewHome Route path="/" exact />
-        <Route path="/about" component={About} />
-        <Route path="/ReactPage" component={ReactPage} />
-      </Switch>
-    </Layout>
-    <FooterPage />
-  </Router>,
+  <React.StrictMode>
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<NewHome />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/ReactPage" element={<ReactPage />} />
+        </Routes>
+      </Layout>
+      <FooterPage />
+    </BrowserRouter>
+  </React.StrictMode>,
   document.getElementById("root")
 );
 
