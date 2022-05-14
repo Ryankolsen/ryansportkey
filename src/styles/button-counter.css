@@ -4,6 +4,7 @@
   text-align: center;
   float: center;
   display: grid;
+  width: auto;
   grid-template-columns: repeat(2, auto);
   grid-template-columns: 200px, 200px;
 }
@@ -46,7 +47,7 @@
 @media screen and (max-width: 445px) {
   .button-counter__container {
     display: block;
-    margin-left: -10px;
+    margin-left: -25px;
   }
 }
 

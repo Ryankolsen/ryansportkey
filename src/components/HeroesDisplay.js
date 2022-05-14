@@ -46,7 +46,6 @@ export default function Heroes() {
   }
 
   if (isLoading) return "Loading...";
-
   if (error) return "An error has occurred: " + error.message;
   return (
     <div className="react_page__header-overline">
