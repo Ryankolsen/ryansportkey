@@ -13,17 +13,12 @@ const queryClient = new QueryClient();
 const ReactPage = () => {
   return (
     <div>
-      {/* <div className="react_page__header-container">
-        <h3 className="react_page__reactBanner">React Projects</h3>
-      </div> */}
-
       <Carousel
         projectCarouselObjects={projectCarouselObjects}
         numberSlides={5}
       />
       <div className="react_page__header-overline"></div>
       <QueryClientProvider client={queryClient}>
-        {" "}
         <div className="react_page__container">
           <ButtonCounter />
           <HeroesDisplay />

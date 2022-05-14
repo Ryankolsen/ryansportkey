@@ -6,26 +6,6 @@ export default function HeroesForm({ heroes, setHeroes }) {
   const heroNameRef = useRef();
   const heroStrengthRef = useRef();
 
-  // useEffect(() => {
-  //   fetchHeroesMongoDb().then((hero) => {
-  //     hero.sort(function (a, b) {
-  //       return b.strength - a.strength;
-  //     });
-  //     setHeroes(hero);
-  //   });
-  //   // eslint-disable-next-line
-  // }, []);
-
-  // async function fetchHeroesMongoDb() {
-  //   const response = await fetch(".netlify/functions/fetch-all-heroes", heroes);
-  //   const result = await response.json();
-
-  //   heroes = result.msg.documents;
-  //   console.log(heroes);
-
-  //   return heroes;
-  // }
-
   async function handleAddHeroMongo() {
     const name = heroNameRef.current.value;
     if (name === "") return;
