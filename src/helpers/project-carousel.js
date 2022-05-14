@@ -51,9 +51,9 @@ export const projectCarouselObjects = [
   {
     key: 4,
     image: data,
-    projectTitle: " Jupyter Notebook DataFrame",
+    projectTitle: "Python Jupyter Notebook DataFrame",
     projectDescriptions:
-      "  Evaluation of Stack Overflow Survey with 65,000 respondents.",
+      "Evaluation of Stack Overflow Survey with 65,000 respondents.",
     links: {
       firstLink:
         "https://github.com/Ryankolsen/Jupyter_Notebook_Stack_Survey_2020",

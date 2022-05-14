@@ -29,6 +29,9 @@ const ButtonCounter = () => {
             >
               Don't Click Me!
             </Button>
+            <div>
+              <Button onClick={() => setCount(0)}> Reset</Button>
+            </div>
           </div>
         </div>
         <div className="button-counter__counter-row  ">
