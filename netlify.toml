@@ -4,6 +4,11 @@
   functions = "functions"
   base = "/"
 
+[[redirects]]
+from = "/*"
+to = "index.html"
+status = 200
+
 [dev]
   command = "npm run dev"
 
