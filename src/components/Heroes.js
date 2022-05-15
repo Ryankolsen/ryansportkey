@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMeteor } from "@fortawesome/free-solid-svg-icons";
-
+const commaStrength = {};
 export default function Heroes({ hero, toggleHeroes }) {
   function handleHeroClick() {
     toggleHeroes(hero.id);
@@ -24,7 +24,7 @@ export default function Heroes({ hero, toggleHeroes }) {
           {hero.name}
           <span className="heroStrengthDisplay badge badge-primary badge-pill">
             <FontAwesomeIcon icon={faMeteor} className="heroes__icon " />
-            {hero.strength}
+            {hero.strength.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           </span>
         </li>
       </ul>
