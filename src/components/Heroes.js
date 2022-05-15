@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMeteor } from "@fortawesome/free-solid-svg-icons";
-const commaStrength = {};
+
 export default function Heroes({ hero, toggleHeroes }) {
   function handleHeroClick() {
     toggleHeroes(hero.id);
