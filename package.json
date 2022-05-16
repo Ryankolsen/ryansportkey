@@ -60,7 +60,7 @@
   "devDependencies": {
     "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.16.0",
     "@types/react-inner-image-zoom": "^2.0.1",
-    "netlify-cli": "^10.3.0"
+    "netlify-cli": "^10.3.1"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",

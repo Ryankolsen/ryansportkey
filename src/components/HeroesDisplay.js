@@ -15,7 +15,7 @@ export default function Heroes() {
   useEffect(() => {
     const retrievedHeroes = data?.msg.documents;
     if (retrievedHeroes && retrievedHeroes !== "undefined") {
-      var sortedHeroes = retrievedHeroes.sort(function (a, b) {
+      const sortedHeroes = retrievedHeroes.sort(function (a, b) {
         return b.strength - a.strength;
       });
       setHeroes(sortedHeroes);
@@ -98,6 +98,9 @@ export default function Heroes() {
               <a href="https://www.learnwithjason.dev/blog/serverless-functions/query-strings-serverless-functions">
                 Access Params in Serverless Functions
               </a>
+            </p>
+            <p>
+              <a href="https://react-query.tanstack.com/">React Query</a>
             </p>
           </div>
         </div>
