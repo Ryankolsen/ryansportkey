@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMeteor } from "@fortawesome/free-solid-svg-icons";
 
-export default function Heroes({ hero, toggleHeroes }) {
+export default function Heroes({
+  hero,
+  toggleHeroes,
+  canDelete,
+  setCanDelete,
+}) {
+  const [currHero, setCurrHero] = useState("");
   function handleHeroClick() {
+    if (canDelete === false) {
+      if (currHero === hero.id) {
+        toggleHeroes(hero.id);
+        setCurrHero("");
+        setCanDelete(true);
+      }
+      return;
+    }
     toggleHeroes(hero.id);
+    setCurrHero(hero.id);
   }
   return (
     <div>
