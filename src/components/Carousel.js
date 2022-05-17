@@ -45,7 +45,10 @@ function Carousel({ projectCarouselObjects, numberSlides }) {
                       }}
                     >
                       <div className="carousel__carousel-inner__h1__div">
-                        <h1 className="carousel__carousel-inner__h1">
+                        <h1
+                          tabIndex={0}
+                          className="carousel__carousel-inner__h1"
+                        >
                           &#8656;
                         </h1>
                       </div>
@@ -62,7 +65,10 @@ function Carousel({ projectCarouselObjects, numberSlides }) {
                       }}
                     >
                       <div className="carousel__carousel-inner__h1__div">
-                        <h1 className="carousel__carousel-inner__h1">
+                        <h1
+                          tabIndex={0}
+                          className="carousel__carousel-inner__h1"
+                        >
                           &#8658;
                         </h1>
                       </div>

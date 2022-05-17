@@ -44,22 +44,6 @@ export default function Heroes() {
     setCanDelete(false);
   }
 
-  // function handleClearHeroesMongo() {
-  //   const deletedHeroes = heroes.filter((hero) => {
-  //     return hero.complete;
-  //   });
-  //   const newHeroes = heroes.filter((hero) => !hero.complete);
-  //   setHeroes(newHeroes);
-  //   deleteHeroesMongo(deletedHeroes);
-  // }
-
-  // async function deleteHeroesMongo(deletedHeroes) {
-  //   await deletedHeroes.forEach((hero) => {
-  //     console.log(hero.id);
-  //     fetch(`.netlify/functions/delete-hero?&id=${hero.id}`);
-  //   });
-  // }
-
   return (
     <div className="react_page__header-overline">
       <Container className="heroes-display__container">
@@ -107,7 +91,7 @@ export default function Heroes() {
               <p className="heroes-display__hero-column-description">
                 These superheroes are stored on a MongoDb database. CRUD
                 operations are performed using Netlify serverless functions to
-                connect directly to the MongoDb data API
+                connect directly to the MongoDb data API.
               </p>
             </div>
             <div className="heroes-display__hero-column-code">
