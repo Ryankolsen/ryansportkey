@@ -46,6 +46,14 @@ function Carousel({ projectCarouselObjects, numberSlides }) {
                     >
                       <div className="carousel__carousel-inner__h1__div">
                         <h1
+                          onKeyPress={() => {
+                            if (currImg === numberSlides) {
+                              setCurrImg(1);
+                            }
+                            if (currImg < numberSlides) {
+                              setCurrImg(currImg + 1);
+                            }
+                          }}
                           tabIndex={0}
                           className="carousel__carousel-inner__h1"
                         >
@@ -66,6 +74,14 @@ function Carousel({ projectCarouselObjects, numberSlides }) {
                     >
                       <div className="carousel__carousel-inner__h1__div">
                         <h1
+                          onKeyPress={() => {
+                            if (currImg === numberSlides) {
+                              setCurrImg(1);
+                            }
+                            if (currImg < numberSlides) {
+                              setCurrImg(currImg + 1);
+                            }
+                          }}
                           tabIndex={0}
                           className="carousel__carousel-inner__h1"
                         >
