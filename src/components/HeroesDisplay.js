@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Button, Container } from "react-bootstrap";
 import { useQuery } from "react-query";
+// import { useMutation } from "react-query";
 
 import HeroList from "./HeroList";
 import HeroesForm from "./HeroesForm";
@@ -11,6 +12,16 @@ export default function Heroes() {
   const { isLoading, error, data } = useQuery("repoData", () =>
     fetch(".netlify/functions/fetch-all-heroes").then((res) => res.json())
   );
+
+  // const mutation = useMutation(() => {
+  //   //TODO Delete
+  //   const deletedHeroes = heroes.filter((hero) => {
+  //     return hero.complete;
+  //   });
+  //   if (deletedHeroes.length > 1) return
+  //   return  fetch(`.netlify/functions/delete-hero?&id=${hero.id}`)
+
+  // })
 
   useEffect(() => {
     const retrievedHeroes = data?.msg.documents;
@@ -45,13 +56,13 @@ export default function Heroes() {
     });
   }
 
-  if (isLoading) return "Loading...";
-  if (error) return "An error has occurred: " + error.message;
   return (
     <div className="react_page__header-overline">
       <Container className="heroes-display__container">
         <div className="heroes-display__hero-column">
           <h1 className="heroes-display__h1"> Heroes</h1>
+          {isLoading ? <div>"Loading..."</div> : null}
+          {error ? <div> An error has occurred: {error.message} </div> : null}
           <HeroList heroes={heroes} toggleHeroes={toggleHeroes} />
           <h3 className="textHeader">
             {`${heroes && heroes.length ? "" : "Add Some Heroes"}`}

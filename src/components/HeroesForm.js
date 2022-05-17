@@ -1,12 +1,13 @@
 import React, { useRef } from "react";
 import { Button, Row, Col } from "react-bootstrap";
 import { v4 as uuidv4 } from "uuid"; //npm i uuid
+import { useMutation } from "react-query";
 
 export default function HeroesForm({ heroes, setHeroes }) {
   const heroNameRef = useRef();
   const heroStrengthRef = useRef();
 
-  async function handleAddHeroMongo() {
+  const mutation = useMutation(() => {
     const name = heroNameRef.current.value;
     if (name === "") return;
     const strength = heroStrengthRef.current.value.toString();
@@ -17,27 +18,23 @@ export default function HeroesForm({ heroes, setHeroes }) {
       strength: strength,
       complete: false,
     };
-
-    await fetch(
-      `.netlify/functions/add-hero?
-      &id=${newHero.id}
-      &name=${name}
-      &strength=${strength}
-      &complete=${true}
-    `
-    );
-
     setHeroes((prevHeroes) => {
-      return [
-        ...prevHeroes,
-        { id: uuidv4(), name: name, strength: strength, complete: false },
-      ].sort(function (a, b) {
+      return [...prevHeroes, newHero].sort(function (a, b) {
         return b.strength - a.strength;
       });
     });
     heroNameRef.current.value = null;
     heroStrengthRef.current.value = null;
-  }
+
+    return fetch(
+      `.netlify/functions/add-hero?
+    &id=${newHero.id}
+    &name=${newHero.name}
+    &strength=${newHero.strength}
+    &complete=${true}
+  `
+    );
+  });
 
   return (
     <div>
@@ -68,8 +65,26 @@ export default function HeroesForm({ heroes, setHeroes }) {
               ref={heroStrengthRef}
             />
           </div>
+          <div>
+            {mutation.isLoading ? (
+              "Saving Hero..."
+            ) : (
+              <>
+                {mutation.isError ? (
+                  <div>An error occurred: {mutation.error.message}</div>
+                ) : null}
+              </>
+            )}
+            {mutation.isSuccess ? <div>Woot! Hero Added!</div> : null}
+          </div>
           <div className="centeredButton">
-            <Button type="submit" className="mb-3" onClick={handleAddHeroMongo}>
+            <Button
+              type="submit"
+              className="mb-3"
+              onClick={() => {
+                mutation.mutate();
+              }}
+            >
               Add Hero
             </Button>
           </div>
