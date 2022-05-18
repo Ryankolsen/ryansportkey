@@ -8,3 +8,11 @@
 .heroes__icon {
   color: rgb(255, 217, 0);
 }
+
+.heroes__icon_red {
+  color: rgb(214, 0, 0);
+}
+
+.heroes__icon_green {
+  color: rgb(89, 248, 89);
+}

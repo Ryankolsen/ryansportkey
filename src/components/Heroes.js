@@ -38,7 +38,17 @@ export default function Heroes({
         >
           {hero.name}
           <span className="heroStrengthDisplay badge badge-primary badge-pill">
-            <FontAwesomeIcon icon={faMeteor} className="heroes__icon " />
+            <FontAwesomeIcon
+              icon={faMeteor}
+              className={
+                hero.strength > 100000
+                  ? "heroes__icon heroes__icon_red"
+                  : hero.strength < 100000
+                  ? "heroes__icon heroes__icon_green"
+                  : "heroes__icon"
+              }
+            />
+            {hero.strength > 100000}
             {hero.strength.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}
           </span>
         </li>
