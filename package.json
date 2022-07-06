@@ -18,10 +18,10 @@
     "mdbreact": "^5.1.0",
     "mongodb": "^4.5.0",
     "node-fetch": "^2.6.7",
-    "react": "^17.0.2",
+    "react": "^18.2.0",
     "react-bootstrap": "^1.6.4",
     "react-bootstrap-floating-label": "^1.6.0",
-    "react-dom": "^17.0.2",
+    "react-dom": "^18.2.0",
     "react-inner-image-zoom": "^2.1.0",
     "react-medium-image-zoom": "^4.3.5",
     "react-query": "^3.39.0",
@@ -59,6 +59,8 @@
   },
   "devDependencies": {
     "@babel/plugin-bugfix-v8-spread-parameters-in-optional-chaining": "^7.16.0",
+    "@types/react": "^18.0.15",
+    "@types/react-dom": "^18.0.6",
     "@types/react-inner-image-zoom": "^2.0.1",
     "netlify-cli": "^10.3.1"
   },
