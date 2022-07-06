@@ -55,7 +55,10 @@ export const Layout = (props) => {
         </Navbar>
       </header>
 
-      <div className="layout__background">
+      <div className="layout__background-sides">
+        <div className="layout__background"></div>
+      </div>
+      <div className="layout__background-solid">
         <div className="layout__body">{props.children}</div>
       </div>
     </div>
